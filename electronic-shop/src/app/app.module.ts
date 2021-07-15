@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './app-routing.module';
+
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ShopComponent } from './shop/shop.component';
+import { BuyNowComponent } from './shop/buy-now/buy-now.component';
+import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
+import { MyCartComponent } from './my-cart/my-cart.component';
+import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
+import { ViewProductComponent } from './shop/view-product/view-product.component';
 
 //Font Awesome
 //To add Later
@@ -76,6 +84,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -130,6 +140,14 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule
+    ShopComponent,
+    BuyNowComponent,
+    AddToCartComponent,
+    ViewProductComponent,
+    MyCartComponent,
+    OrderCheckoutComponent,
+    BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -91,7 +91,7 @@
     border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 250px;
+    height: 290px;
     width: 200px;
     margin: 0 8px 16px;
     padding: 16px;
@@ -299,7 +299,7 @@
 /*EDIT CCS*/
 
 .shop-bag {
-    padding-right: 5%;
+  padding-right: 5%;
 }
 
 .toolbar svg {
@@ -368,9 +368,8 @@
 }
 
 .side-picture img{
-  margin-top: 30px;
-  width: 620px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .home-content a{
@@ -378,16 +377,19 @@
   color: white;
 }
 
-.jumbotron {
+.pro-details {
   background-color: white;
-  float: left;
-  margin-left: -100px;
+  float: right;
+  margin-left: 1450px;
 
 }
 
 .lead {
   width: 480px;
   padding-left: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .home-content {
@@ -397,15 +399,83 @@
 
 .side-picture {
   position: absolute;
-  float: right;
-  margin-left: 450px;
+  float: left;
+}
+
+.title-product {
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .title-home {
-  justify-content: center;
-  text-align: center;
-  padding-top: 150px;
-  padding-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+#itemQuantity {
+    text-align: center;
+}
+
+input {
+    height: 35px;
+    font-size: 20px;
+}
+
+.quanti span, .shipping span{
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+#colored, .shipping svg, .rating span, .rating svg, .lead{
+    color: #fd3a5c;
+}
+
+.shipping svg {
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: -10px;
+}
+
+.shipping p {
+    margin-left: 112px;
+}
+
+.shipping, .quanti {
+    padding-bottom: 30px;
+}
+
+.quanti input {
+    margin-left: 11px;
+}
+
+.rating {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.rating span {
+    margin-right: 5px;
+}
+
+#rate-num, #sold {
+    color: #585252;
+}
+
+.rating #rate-num, .rating #sold {
+    padding-left: 15px;
+
+}
+
+.rating #rate-num span, .rating #sold span{
+    padding-left: 15px;
+    font-weight: 600;
 }
 
 .shop-bag span{
@@ -413,23 +483,14 @@
   margin-top: -5px;
 }
 
-h1, h3, h6 {
-  font-family: Poppins;
+.card-container .card img {
+  width: 165px;
+  height: 162px;
 }
 
-.jumbotron h1{
-  font-size: 70px;
-  font-weight: 450;
-  margin-top: 70px;
-  padding-bottom: 40px;
-}
-
-.lead {
-  padding-bottom: 20px;
-}
-
-.title-home h3 {
-  font-weight: 500;
-  font-size: 27px;
-  font-family: Poppins;
+.return-btn svg {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  margin-top: 40px;
 }

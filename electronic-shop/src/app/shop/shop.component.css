@@ -65,6 +65,7 @@
     padding: 0 16px;
     max-width: 960px;
     flex-direction: column;
+    align-items: center;
   }
 
   svg.material-icons {
@@ -91,7 +92,7 @@
     border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 250px;
+    height: 290px;
     width: 200px;
     margin: 0 8px 16px;
     padding: 16px;
@@ -297,6 +298,11 @@
 
 
 /*EDIT CCS*/
+.toolbar img {
+  width: 235px;
+  height: 30px;
+  padding-left: 5%;
+}
 
 .shop-bag {
     padding-right: 5%;
@@ -304,12 +310,6 @@
 
 .toolbar svg {
     color: #585252;
-}
-
-.toolbar img {
-  width: 235px;
-  height: 30px;
-  padding-left: 5%;
 }
 
 .nav {
@@ -367,45 +367,15 @@
   padding-top: 25px;
 }
 
-.side-picture img{
-  margin-top: 30px;
-  width: 620px;
-  height: 400px;
-}
-
-.home-content a{
-  margin-top: 15px;
-  color: white;
-}
-
-.jumbotron {
-  background-color: white;
-  float: left;
-  margin-left: -100px;
-
-}
-
-.lead {
-  width: 480px;
-  padding-left: 20px;
-}
-
-.home-content {
-  position: relative;
-  padding-top: 20px;
-}
-
-.side-picture {
-  position: absolute;
-  float: right;
-  margin-left: 450px;
-}
-
 .title-home {
   justify-content: center;
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 20px;
+  padding: 20px;
+}
+
+.card-container .card img {
+  width: 165px;
+  height: 162px;
 }
 
 .shop-bag span{
@@ -432,4 +402,24 @@ h1, h3, h6 {
   font-weight: 500;
   font-size: 27px;
   font-family: Poppins;
+}
+
+#price, .total h6 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.card-text h6, .card-text p {
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+}
+
+.card-text h6 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.card-text p {
+  font-weight: 500;
 }
