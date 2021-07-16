@@ -15,7 +15,8 @@ import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
 import { ViewProductComponent } from './shop/view-product/view-product.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
-
+import { ProfileAccComponent } from './profile-acc/profile-acc.component';
+import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
 
 const routes: Routes = [
 
@@ -30,7 +31,9 @@ const routes: Routes = [
   { path: 'online-electronic-shop/product-details', component : ViewProductComponent},
   { path: 'online-electronic-shop/my-cart', component : MyCartComponent},
   { path: 'online-electronic-shop/my-cart/order-checkout', component : OrderCheckoutComponent},
-  
+  { path: 'online-electronic-shop/profile', component : ProfileAccComponent},
+  { path: 'online-electronic-shop/purchases', component : PurchaseComponent},
+
 ];
 
 @NgModule({

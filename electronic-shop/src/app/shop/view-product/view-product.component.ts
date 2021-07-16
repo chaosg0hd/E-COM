@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-view-product',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) {}
+
+  openBar(message: string) {
+    this._snackBar.open(message);
+  }
 
   ngOnInit(): void {
   }

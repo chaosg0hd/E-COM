@@ -42,7 +42,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // Material Navigation
 
 import { MatMenuModule } from '@angular/material/menu';
@@ -83,6 +83,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { ProfileAccComponent } from './profile-acc/profile-acc.component';
+import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
 
 
 
@@ -92,7 +94,15 @@ import { MatTableModule } from '@angular/material/table';
     HomeComponent,
     LoginComponent,
     AdminComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    ShopComponent,
+    BuyNowComponent,
+    AddToCartComponent,
+    ViewProductComponent,
+    MyCartComponent,
+    OrderCheckoutComponent,
+    ProfileAccComponent,
+    PurchaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -139,15 +149,11 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
-    ShopComponent,
-    BuyNowComponent,
-    AddToCartComponent,
-    ViewProductComponent,
-    MyCartComponent,
-    OrderCheckoutComponent,
+    MatTableModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
