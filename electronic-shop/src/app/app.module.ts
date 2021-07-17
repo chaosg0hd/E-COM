@@ -84,7 +84,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { ProfileAccComponent } from './profile-acc/profile-acc.component';
-import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
+import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
 
 
 
@@ -102,7 +102,7 @@ import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
     MyCartComponent,
     OrderCheckoutComponent,
     ProfileAccComponent,
-    PurchaseComponent,
+    PurchaseHistoryComponent,
   ],
   imports: [
     BrowserModule,

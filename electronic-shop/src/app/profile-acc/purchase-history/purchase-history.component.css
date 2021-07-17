@@ -592,7 +592,7 @@ input {
     font-size: 16px;
     margin-left: 200px;
     padding-right: 77px;
-    padding-top: 34px;
+    padding-top: 58px;
 }
 
 .shop-bag span{
@@ -724,3 +724,46 @@ mat-list-item svg {
 .card-height mat-list mat-list-item span svg, .view-history svg:hover, .view-history p:hover{
   color: #fd3a5c;
 }
+
+::ng-deep.mat-tab-label {
+    font-family: 'Poppins', sans-serif;
+    color: #585252;
+
+}
+
+#quantity {
+    color: #585252;
+    padding-left: 20px;
+}
+
+.card button {
+    font-family: 'Poppins', sans-serif;
+    width: 180px;
+    float: right;
+    margin-top: 120px;
+    align-items: flex-end;
+    margin-left: 680px;
+    position: absolute;
+}
+
+.card-height mat-divider {
+    margin-top: 10px;
+}
+
+.card-height p,  .card-height span {
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #666262c7;
+}
+
+.card-height p {
+    margin-left: 15px;
+    position: relative;
+
+}
+
+.card-height {
+    margin-top: 20px;
+}
+
+

@@ -16,7 +16,8 @@ import { ViewProductComponent } from './shop/view-product/view-product.component
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ProfileAccComponent } from './profile-acc/profile-acc.component';
-import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
+import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
+
 
 const routes: Routes = [
 
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'online-electronic-shop/my-cart', component : MyCartComponent},
   { path: 'online-electronic-shop/my-cart/order-checkout', component : OrderCheckoutComponent},
   { path: 'online-electronic-shop/profile', component : ProfileAccComponent},
-  { path: 'online-electronic-shop/purchases', component : PurchaseComponent},
+  { path: 'online-electronic-shop/purchase-history', component : PurchaseHistoryComponent},
+
 
 ];
 
