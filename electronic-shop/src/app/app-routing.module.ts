@@ -17,6 +17,12 @@ import { MyCartComponent } from './my-cart/my-cart.component';
 import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ProfileAccComponent } from './profile-acc/profile-acc.component';
 import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
+import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
+import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
+import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
+import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
+
+
 
 
 const routes: Routes = [
@@ -34,6 +40,10 @@ const routes: Routes = [
   { path: 'online-electronic-shop/my-cart/order-checkout', component : OrderCheckoutComponent},
   { path: 'online-electronic-shop/profile', component : ProfileAccComponent},
   { path: 'online-electronic-shop/purchase-history', component : PurchaseHistoryComponent},
+  { path: 'online-electronic-shop/profile/edit-profile', component : EditProfileComponent},
+  { path: 'online-electronic-shop/profile/my-addresses', component : MyAddressComponent},
+  { path: 'online-electronic-shop/profile/my-addresses/add-address', component : AddAddressComponent},
+  { path: 'online-electronic-shop/profile/my-addresses/edit-address', component : EditAddressComponent},
 
 
 ];

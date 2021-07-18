@@ -85,6 +85,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { ProfileAccComponent } from './profile-acc/profile-acc.component';
 import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
+import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
+import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
+import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
+import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
 
 
 
@@ -103,6 +107,10 @@ import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchas
     OrderCheckoutComponent,
     ProfileAccComponent,
     PurchaseHistoryComponent,
+    EditProfileComponent,
+    EditAddressComponent,
+    MyAddressComponent,
+    AddAddressComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+<h2 mat-dialog-title><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+</svg></span>Edit Profile</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputFullname" class="form-label">Fullname<span>*</span></label>
+        <input type="text" class="form-control" id="inputFullname">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email<span>*</span></label>
+        <input type="email" class="form-control" id="inputEmail">
+      </div>
+      <div class="col-md-4">
+          <label for="inputGender" class="form-label">Gender<span>*</span></label>
+          <input type="text" class="form-control" id="inputGender">    
+      </div>
+      <div class="col-md-4">
+          <label for="inputBday" class="form-label">Birthday<span>*</span></label>
+          <input type="date" class="form-control" id="inputBday">
+      </div>
+      <div class="col-md-4">
+        <label for="inputPhonenumber" class="form-label">Phone Number<span>*</span></label>
+        <input type="phone" class="form-control" id="inputPhonenumber">
+      </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+<button mat-button mat-dialog-close>Cancel</button>
+<button id="colored" mat-flat-button [mat-dialog-close]="true" cdkFocusInitial>Submit</button>
+</mat-dialog-actions>
