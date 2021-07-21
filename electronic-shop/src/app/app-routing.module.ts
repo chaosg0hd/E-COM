@@ -21,6 +21,10 @@ import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.co
 import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
 import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
 import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ProductsComponent } from './admin/products/products.component';
+import { OrdersComponent } from './admin/orders/orders.component';
+
 
 
 
@@ -44,6 +48,13 @@ const routes: Routes = [
   { path: 'online-electronic-shop/profile/my-addresses', component : MyAddressComponent},
   { path: 'online-electronic-shop/profile/my-addresses/add-address', component : AddAddressComponent},
   { path: 'online-electronic-shop/profile/my-addresses/edit-address', component : EditAddressComponent},
+
+  // ONLINE ELECTRONIC SHOP ADMIN PANEL
+  { path: 'online-electronic-shop/admin-panel/dashboard', component : DashboardComponent},
+  { path: 'online-electronic-shop/admin-panel/orders', component : OrdersComponent},
+  { path: 'online-electronic-shop/admin-panel/products', component : ProductsComponent},
+
+
 
 
 ];
