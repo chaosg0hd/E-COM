@@ -65,7 +65,6 @@
     padding: 0 16px;
     max-width: 960px;
     flex-direction: column;
-    align-items: center;
   }
 
   svg.material-icons {
@@ -84,22 +83,20 @@
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
+    justify-content: left;
   }
 
   .card {
     border-radius: 10px;
-    border: 1px solid #eee;
     background-color: #fafafa;
-    height: 290px;
-    width: 200px;
+    height: 130px;
+    width: 950px;
     margin: 0 8px 16px;
     padding: 16px;
     display: flex;
     /*flex-direction: row;*/
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
@@ -117,10 +114,6 @@
     cursor: pointer;
   }
 
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
 
   .card-container .card:not(.highlight-card):hover .material-icons path {
     fill: rgb(105, 103, 103);
@@ -219,6 +212,18 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
   .github-star-badge {
     color: #24292e;
     display: flex;
@@ -284,20 +289,35 @@
     }
   }
 
+  @media screen and (max-width: 750px) {
+    .shop-bag .badge {
+      position: absolute;
+      right: 38px;
+      height: 18px;
+      padding: 0px 5px;
+      border-radius: 50%;
+      background: #fd3a5c;
+      color: white;
+      margin-top: -7px;
+      margin-right: 200px;
+    }
+  }
+
 
 /*EDIT CCS*/
-.toolbar img {
-  width: 235px;
-  height: 30px;
-  padding-left: 5%;
-}
 
-.shop-bag {
+.shop-bag{
     padding-right: 5%;
 }
 
 .toolbar svg {
     color: #585252;
+}
+
+.toolbar img {
+  width: 235px;
+  height: 30px;
+  padding-left: 5%;
 }
 
 .nav {
@@ -326,6 +346,7 @@
 
 .shop-bag .badge {
   border-radius: 100%;
+  background: #fd3a5c;
   color: white;
 }
 
@@ -353,22 +374,235 @@
 
 .page-container {
   padding-top: 25px;
+  float: left;
+}
+
+.side-picture img{
+  width: 300px;
+  height: 300px;
+}
+
+.home-content a{
+  margin-top: 15px;
+  color: white;
+}
+
+.pro-details {
+  background-color: white;
+  float: right;
+  margin-left: 1450px;
+
+}
+
+.lead {
+  width: 480px;
+  padding-left: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.home-content {
+  position: relative;
+  padding-top: 20px;
+}
+
+.side-picture {
+  position: absolute;
+  float: left;
+}
+
+.title-product {
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
 }
 
 .title-home {
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 20px;
 }
 
-.card-container .card img {
-  width: 165px;
-  height: 162px;
+#itemQuantity {
+    text-align: center;
+}
+
+input {
+    height: 35px;
+    font-size: 20px;
+}
+
+.quanti span, .shipping span{
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+#colored, .shipping svg, .rating span, .rating svg, .lead,
+ .form-check span, .total h6 span, #del-add svg, #sopt-color,
+ .ship-info span, .payment-det span, .ship-opt #tot-pay, .form-check #total {
+    color: #fd3a5c;
+}
+
+.shipping svg {
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: -10px;
+}
+
+.shipping p {
+    margin-left: 112px;
+}
+
+.shipping, .quanti {
+    padding-bottom: 30px;
+}
+
+.quanti input {
+    margin-left: 11px;
+}
+
+.rating {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.rating span {
+    margin-right: 5px;
+}
+
+#rate-num, #sold {
+    color: #585252;
+}
+
+.rating #rate-num, .rating #sold {
+    padding-left: 15px;
+
+}
+
+.rating #rate-num span, .rating #sold span{
+    padding-left: 15px;
+    font-weight: 600;
+
+}
+
+.form-check img {
+    height: 100px;
+    width: 100px;
+    margin-left: 48px;
+}
+
+.form-check-input {
+    height: 20px;
+    width: 20px;
+    margin-left: 0px;
+    margin-top: 38px;
+}
+
+.form-check-label, .ship-info span {
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: center;
+}
+
+.ship-info span, .payment-det span{
+    float: right;
+    padding-top: 3px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.total h6 {
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 15px;
+    float: left;
+    padding-right: 10px;
+}
+
+.total h6 span {
+    padding-left: 15px;
+    font-weight: 700;
+}
+
+.btn-order span {
+    padding-left: 10px;
+}
+
+#del-add, #ship-opt, .ship-opt #tot-pay{
+    font-weight: 700;
+}
+
+#del-add svg {
+    margin-right: 10px;
+}
+
+.customer-info, .ship-info, .payment-det {
+    padding-left: 25px;
+}
+
+.ship-info span {
+    position: absolute;
+    margin-left: 700px;
+    margin-top: -60px;
+}
+
+#mer-sub {
+    position: absolute;
+    margin-left: 549px;
+    margin-top: -3px;
+    color: #585252;
+    font-size: 13px;
+
+}
+
+#shi-sub {
+    position: absolute;
+    margin-left: 578px;
+    margin-top: -3px;
+    color: #585252;
+    font-size: 13px;
+
+}
+
+.ship-opt #tot-pay {
+    position: absolute;
+    margin-left: 598px;
+    margin-top: -3px;
+}
+
+.form-check #total {
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 200px;
+    padding-right: 77px;
+    padding-top: 34px;
 }
 
 .shop-bag span{
   margin-left: -5px;
   margin-top: -5px;
+}
+
+.return-btn svg {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  margin-top: 40px;
+}
+
+#price, .total h6 {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 h1, h3, h6 {
@@ -383,55 +617,11 @@ h1, h3, h6 {
 }
 
 .lead {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
-.title-home h3 {
+.title-product h3 {
   font-weight: 500;
   font-size: 27px;
   font-family: Poppins;
-}
-
-#price, .total h6 {
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.card-text h6, .card-text p {
-  font-size: 14px;
-  text-align: center;
-  justify-content: center;
-}
-
-.card-text h6 {
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-.card-text p {
-  font-weight: 500;
-}
-
-footer {
-  background-color: #fd3a5c;
-  width: 100%;
-  height: 50px;
-}
-
-footer p {
-  color: #e6ebf1;
-  font-size: 15px;
-  font-family: Poppins;
-  text-align: center;
-  justify-content: center;
-  justify-self: center;
-  padding-top: 18px;
-
-}
-
-footer span {
-  font-weight: 800;
-  text-align: center;
-  justify-content: center;
-  justify-self: center;
 }

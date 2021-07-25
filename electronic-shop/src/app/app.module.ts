@@ -16,6 +16,12 @@ import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ViewProductComponent } from './shop/view-product/view-product.component';
+import { ProfileAccComponent } from './profile-acc/profile-acc.component';
+import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
+import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
+import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
+import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
+import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
 
 //WILL INCLUDE NG-BOOTSTRAP IF GUSTO NYO TALAGA
 
@@ -157,7 +163,8 @@ import { IndexComponent } from './index/index.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

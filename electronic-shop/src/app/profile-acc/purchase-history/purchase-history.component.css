@@ -114,10 +114,6 @@
     cursor: pointer;
   }
 
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
 
   .card-container .card:not(.highlight-card):hover .material-icons path {
     fill: rgb(105, 103, 103);
@@ -216,6 +212,18 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
   .github-star-badge {
     color: #24292e;
     display: flex;
@@ -281,10 +289,24 @@
     }
   }
 
+  @media screen and (max-width: 750px) {
+    .shop-bag .badge {
+      position: absolute;
+      right: 38px;
+      height: 18px;
+      padding: 0px 5px;
+      border-radius: 50%;
+      background: #fd3a5c;
+      color: white;
+      margin-top: -7px;
+      margin-right: 200px;
+    }
+  }
+
 
 /*EDIT CCS*/
 
-.shop-bag {
+.shop-bag{
     padding-right: 5%;
 }
 
@@ -324,6 +346,7 @@
 
 .shop-bag .badge {
   border-radius: 100%;
+  background: #fd3a5c;
   color: white;
 }
 
@@ -331,7 +354,7 @@
   color: #585252;
 }
 
-.toolbar, .content {
+.toolbar, .content, mat-list-item {
   font-family: Poppins;
 }
 
@@ -420,7 +443,9 @@ input {
     padding: 10px;
 }
 
-#colored, .shipping svg, .rating span, .rating svg, .lead, .form-check span, .total h6 span {
+#colored, .shipping svg, .rating span, .rating svg, .lead,
+ .form-check span, .total h6 span, #del-add svg, #sopt-color,
+ .ship-info span, .payment-det span, .ship-opt #tot-pay, .form-check #total {
     color: #fd3a5c;
 }
 
@@ -470,9 +495,9 @@ input {
 }
 
 .form-check img {
- height: 100px;
- width: 100px;
- margin-left: 48px;
+    height: 100px;
+    width: 100px;
+    margin-left: 48px;
 }
 
 .form-check-input {
@@ -482,15 +507,15 @@ input {
     margin-top: 38px;
 }
 
-.form-check-label, .form-check span {
+.form-check-label, .ship-info span {
     padding-left: 45px;
     padding-right: 45px;
     text-align: center;
 }
 
-.form-check span {
+.ship-info span, .payment-det span{
     float: right;
-    padding-top: 35px;
+    padding-top: 3px;
     font-weight: 500;
     font-size: 16px;
 }
@@ -518,6 +543,58 @@ input {
     padding-left: 10px;
 }
 
+#del-add, #ship-opt, .ship-opt #tot-pay{
+    font-weight: 700;
+}
+
+#del-add svg {
+    margin-right: 10px;
+}
+
+.customer-info, .ship-info, .payment-det, .customer-purchase {
+    padding-left: 25px;
+    
+}
+
+.ship-info span {
+    position: absolute;
+    margin-left: 700px;
+    margin-top: -60px;
+}
+
+#mer-sub {
+    position: absolute;
+    margin-left: 549px;
+    margin-top: -3px;
+    color: #585252;
+    font-size: 13px;
+
+}
+
+#shi-sub {
+    position: absolute;
+    margin-left: 578px;
+    margin-top: -3px;
+    color: #585252;
+    font-size: 13px;
+
+}
+
+.ship-opt #tot-pay {
+    position: absolute;
+    margin-left: 598px;
+    margin-top: -3px;
+}
+
+.form-check #total {
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 200px;
+    padding-right: 77px;
+    padding-top: 58px;
+}
+
 .shop-bag span{
   margin-left: -5px;
   margin-top: -5px;
@@ -528,6 +605,11 @@ input {
   width: 25px;
   position: absolute;
   margin-top: 40px;
+}
+
+#price, .total h6 {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 h1, h3, h6 {
@@ -542,7 +624,7 @@ h1, h3, h6 {
 }
 
 .lead {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 .title-product h3 {
@@ -551,7 +633,137 @@ h1, h3, h6 {
   font-family: Poppins;
 }
 
-#price, .total h6 {
-  font-weight: 500;
-  font-size: 16px;
+.customer-pic img {
+    width: 100px;
+    height: 100px;
+    border-color: #eff3f6;
+    border-radius: 109%;
+    margin-left: 20px;
+
 }
+
+.colored {
+    background-color: #fd3a5c;
+}
+
+.customer-info {
+    color: #f0f3f6;
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 15px;
+}
+
+.to-pay svg, .to-ship svg, .to-receive svg, .to-rate svg{
+    width: 35px;
+    height: 35px;
+}
+
+.to-pay {
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    color: #585252c7;
+}
+
+.to-ship{
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    color: #585252c7;
+
+}
+
+.to-receive {
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    color: #585252c7;
+}
+
+.to-rate{
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    color: #585252c7;
+}
+
+.purchase {
+     margin-top: -10px;
+}
+
+.to-pay span, .to-rate span, .to-receive span, .to-ship span {
+    color: #f0f3f6;
+    border-radius: 100%;
+}
+
+.view-history {
+    position: absolute;
+    float: right;
+    justify-content: end;
+    margin-left: 78%;
+    color: #666262c7;
+    text-decoration: none;
+
+}
+
+
+.card-height {
+    height: 190px;
+}
+
+mat-list-item {
+    font-size: 10px;
+}
+
+mat-list-item svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.card-height mat-list mat-list-item span svg, .view-history svg:hover, .view-history p:hover{
+  color: #fd3a5c;
+}
+
+::ng-deep.mat-tab-label {
+    font-family: 'Poppins', sans-serif;
+    color: #585252;
+
+}
+
+#quantity {
+    color: #585252;
+    padding-left: 20px;
+}
+
+.card button {
+    font-family: 'Poppins', sans-serif;
+    width: 180px;
+    float: right;
+    margin-top: 120px;
+    align-items: flex-end;
+    margin-left: 680px;
+    position: absolute;
+}
+
+.card-height mat-divider {
+    margin-top: 10px;
+}
+
+.card-height p,  .card-height span {
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #666262c7;
+}
+
+.card-height p {
+    margin-left: 15px;
+    position: relative;
+
+}
+
+.card-height {
+    margin-top: 20px;
+}
+
+

@@ -1,0 +1,43 @@
+<h2 mat-dialog-title><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+  </svg></span>New Address</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputFullname" class="form-label">Fullname<span>*</span></label>
+          <input type="text" class="form-control" id="inputFullname">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPhonenumber" class="form-label">Phone Number<span>*</span></label>
+          <input type="phone" class="form-control" id="inputPhonenumber">
+        </div>
+        <div class="col-12">
+          <label for="inputDetailedAddress2" class="form-label">Detailed Address<span>*</span></label>
+          <input type="text" class="form-control" id="inputDetailedAddress2" placeholder="Unit Number, House Number, Building, Street Name">
+        </div>
+        <div class="col-md-6">
+            <label for="inputBarangay" class="form-label">Barangay<span>*</span></label>
+            <input type="text" class="form-control" id="inputBarangay">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City<span>*</span></label>
+            <input type="phone" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-5">
+            <label for="inputProvince" class="form-label">Province<span>*</span></label>
+            <input type="text" class="form-control" id="inputBrgy">
+        </div>
+        <div class="col-md-5">
+          <label for="inputCity" class="form-label">Region<span>*</span></label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-2">
+          <label for="inputPostal" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="inputPostal">
+        </div>
+      </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button id="colored" mat-flat-button [mat-dialog-close]="true" cdkFocusInitial>Submit</button>
+</mat-dialog-actions>
