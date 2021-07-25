@@ -17,22 +17,32 @@ import { MyCartComponent } from './my-cart/my-cart.component';
 import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ProfileAccComponent } from './profile-acc/profile-acc.component';
 import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
+import { IndexComponent } from './index/index.component';
+
+
+//try natin iwsan mga long url names
+var oes = "online-electronic-shop";
 
 const routes: Routes = [
 
   // ONLINE ELECTRONIC SHOP SYSTEM
-  { path: '', redirectTo: 'online-electronic-shop/home', pathMatch: 'full'},
-  { path: 'online-electronic-shop/login', component : LoginComponent},
-  { path: 'online-electronic-shop/register', component : RegisterComponent},
-  { path: 'online-electronic-shop/home', component : HomeComponent},
-  { path: 'online-electronic-shop/shop', component : ShopComponent},
-  { path: 'online-electronic-shop/product-details/buy-now', component : BuyNowComponent},
-  { path: 'online-electronic-shop/product-details/add-to-cart', component : AddToCartComponent},
-  { path: 'online-electronic-shop/product-details', component : ViewProductComponent},
-  { path: 'online-electronic-shop/my-cart', component : MyCartComponent},
-  { path: 'online-electronic-shop/my-cart/order-checkout', component : OrderCheckoutComponent},
-  { path: 'online-electronic-shop/profile', component : ProfileAccComponent},
-  { path: 'online-electronic-shop/purchases', component : PurchaseComponent},
+  // Create landing page
+
+
+  { path: '', redirectTo: oes + '/index', pathMatch: 'full' },
+  { path: oes + '/index', component: IndexComponent },
+  { path: oes + '/home', component: HomeComponent },
+  { path: oes + '/login', component : LoginComponent},
+  { path: oes + '/register', component : RegisterComponent},
+  { path: oes + '/home', component : HomeComponent},
+  { path: oes + '/shop', component : ShopComponent},
+  { path: oes + '/product-details/buy-now', component : BuyNowComponent},
+  { path: oes + '/product-details/add-to-cart', component : AddToCartComponent},
+  { path: oes + '/product-details', component : ViewProductComponent},
+  { path: oes + '/my-cart', component : MyCartComponent},
+  { path: oes + '/my-cart/order-checkout', component : OrderCheckoutComponent},
+  { path: oes + '/profile', component : ProfileAccComponent},
+  { path: oes + '/purchases', component : PurchaseComponent},
 
 ];
 

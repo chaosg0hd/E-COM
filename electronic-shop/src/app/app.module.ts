@@ -17,6 +17,8 @@ import { MyCartComponent } from './my-cart/my-cart.component';
 import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ViewProductComponent } from './shop/view-product/view-product.component';
 
+//WILL INCLUDE NG-BOOTSTRAP IF GUSTO NYO TALAGA
+
 //Font Awesome
 //To add Later
 /*import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';*/
@@ -85,6 +87,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { ProfileAccComponent } from './profile-acc/profile-acc.component';
 import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
+import { IndexComponent } from './index/index.component';
 
 
 
@@ -103,6 +106,7 @@ import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
     OrderCheckoutComponent,
     ProfileAccComponent,
     PurchaseComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
