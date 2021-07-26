@@ -1,7 +1,7 @@
-
+<!--HEADER-->
 <mat-toolbar class="mat-elevation-z8" style="padding: 8px; padding-top: 16px !important; vertical-align: middle; position: sticky; top: 0; z-index: 100">
 
-  <img src="../assets/img/logoname2.png" alt="Electronic Shop">
+  <img src="../assets/img/logoname2.png" alt="Electronic Shop" routerLink="/online-electronic-shop/home">
 
   <div class="spacer-left"></div>
 
@@ -12,13 +12,17 @@
 
   <div class="spacer-right"></div>
 
+  <div class="shop-bag position-relative" target="_blank" rel="noopener" title="Shopping Bag" routerLink="/online-electronic-shop/my-cart">
+    <mat-icon matBadge="3" matBadgeColor="warn">shopping_basket</mat-icon>       
+  </div>
+
 </mat-toolbar>
 
 <router-outlet>
 
 </router-outlet>
 
-
-<mat-toolbar style="background-color: #fd3a5c; color: white">
+<!--FOOTER-->
+<footer>
   <p>© Electronic Shop <span>·</span> 2021</p>
-</mat-toolbar>
+</footer>
