@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LoginComponent } from './index/user/auth/login/login.component';
-//import { RegisterComponent } from './auth/register/register.component';
+import { RegisterComponent } from './index/user/auth/register/register.component';
 
 import { HomeComponent } from './index/user/home/home.component';
 import { ShopComponent } from './index/user/shop/shop.component';
@@ -43,6 +43,11 @@ const routes: Routes = [
 
   {
     path: 'login', component: LoginComponent 
+      
+  },
+
+  {
+    path: 'register', component: RegisterComponent 
       
   },
 

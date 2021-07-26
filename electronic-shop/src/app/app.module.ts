@@ -19,7 +19,7 @@ import { ShopComponent } from './index/user/shop/shop.component';
 
 
 import { LoginComponent } from './index/user/auth/login/login.component';
-//import { RegisterComponent } from './auth/register/register.component';
+import { RegisterComponent } from './index/user/auth/register/register.component';
 
 //import { BuyNowComponent } from './shop/buy-now/buy-now.component';
 //import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
@@ -121,6 +121,7 @@ import { IndexComponent } from './index/index.component';
 
     HomeComponent,
     LoginComponent,
+    RegisterComponent,
     //AdminComponent,
     //DeliveryComponent,
     ShopComponent,
