@@ -1,29 +1,41 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
-import { DeliveryComponent } from './delivery/delivery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { ShopComponent } from './shop/shop.component';
-import { BuyNowComponent } from './shop/buy-now/buy-now.component';
-import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
-import { MyCartComponent } from './my-cart/my-cart.component';
-import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
-import { ViewProductComponent } from './shop/view-product/view-product.component';
-import { ProfileAccComponent } from './profile-acc/profile-acc.component';
-import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
-import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
-import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
-import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
-import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
+//App Components
 
-//WILL INCLUDE NG-BOOTSTRAP IF GUSTO NYO TALAGA
+import { HomeComponent } from './index/user/home/home.component';
+import { ShopComponent } from './index/user/shop/shop.component';
+
+
+//import { AdminComponent } from './admin/admin.component';
+//import { DeliveryComponent } from './delivery/delivery.component';
+
+
+
+
+import { LoginComponent } from './index/user/auth/login/login.component';
+//import { RegisterComponent } from './auth/register/register.component';
+
+//import { BuyNowComponent } from './shop/buy-now/buy-now.component';
+//import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
+//import { MyCartComponent } from './my-cart/my-cart.component';
+//import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
+//import { ViewProductComponent } from './shop/view-product/view-product.component';
+
+/*import { ProfileAccComponent } from './profile-acc/profile-acc.component';*/
+
+//import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
+//import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
+//import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
+//import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
+//import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
+
+
 
 //Font Awesome
 //To add Later
@@ -50,7 +62,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatNativeDateModule } from '@angular/material/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 // Material Navigation
 
 import { MatMenuModule } from '@angular/material/menu';
@@ -91,33 +104,40 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
-import { ProfileAccComponent } from './profile-acc/profile-acc.component';
-import { PurchaseComponent } from './profile-acc/purchase/purchase.component';
+
+
+/*import { ProfileAccComponent } from './profile-acc/profile-acc.component';*/
+
+/*import { PurchaseComponent } from './profile-acc/purchase/purchase.component';*/
+
 import { IndexComponent } from './index/index.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
     HomeComponent,
     LoginComponent,
-    AdminComponent,
-    DeliveryComponent,
+    //AdminComponent,
+    //DeliveryComponent,
     ShopComponent,
-    BuyNowComponent,
-    AddToCartComponent,
-    ViewProductComponent,
-    MyCartComponent,
-    OrderCheckoutComponent,
-    ProfileAccComponent,
-    PurchaseComponent,
+    //BuyNowComponent,
+    //AddToCartComponent,
+    //ViewProductComponent,
+    //MyCartComponent,
+    //OrderCheckoutComponent,
+    //ProfileAccComponent,
+    ///*PurchaseComponent,*/
     IndexComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
 
     // Material Cons Imports
 
@@ -164,9 +184,11 @@ import { IndexComponent } from './index/index.component';
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    MatInputModule,
+
+    /*HttpClientModule*/
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

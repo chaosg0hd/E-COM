@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+/*///////////////////////IMPORTS/////////////////////////////////*/
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -37,5 +37,20 @@
     font-feature-settings: 'liga';
 }
 
+
+/*////////////////////////////////OVERRIDES/////////////////////*/
+
+
 html, body { height: 100%; }
 body { margin: 0; }
+
+/*//////////////////////CLASSES/////////////////////////////////*/
+
+
+.spacer-right {
+  flex: 1;
+}
+
+.spacer-left {
+  flex: .7;
+}

@@ -8,6 +8,7 @@ class Get{
         $this->gm = new GlobalMethods($pdo);
     }
 
+
     //User Operations
 
     public function pullAllUser ($d) {
@@ -28,6 +29,24 @@ class Get{
     
     public function pullSpecUser ($d) {
 		  $sql = "SELECT * FROM tbl_user WHERE user_id = '$d'";
+		
+		  $res = $this->gm->generalQuery($sql, "No records found");
+		  if ($res['code'] == 200) {
+			  $payload = $res['data'];
+			  $remarks = "success";
+			  $message = "Successfully retrieved requested data";
+		  } else {
+			  $payload = null;
+			  $remarks = "failed";
+			  $message = $res['errmsg'];
+		  }
+		  return $this->gm->sendPayload($payload, $remarks, $message, $res['code']);
+	  }
+
+	//Prod Operations
+
+    public function pullAllProd ($d) {
+		  $sql = "SELECT * FROM products_tb";
 		
 		  $res = $this->gm->generalQuery($sql, "No records found");
 		  if ($res['code'] == 200) {

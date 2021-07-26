@@ -64,6 +64,18 @@
 					echo json_encode($auth->loginUser($d), JSON_PRETTY_PRINT);
 				break;
 
+		// Prod Operations
+
+        case 'pullAllProd':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo $d;
+            if(count($req)>1) {                       
+						echo json_encode($get->pullAllProd($d), JSON_PRETTY_PRINT);
+					} else {
+						echo json_encode($get->pullAllProd($d), JSON_PRETTY_PRINT);
+					}
+				break;
+
       // Emp Operations
 
         case 'pullAllEmp':

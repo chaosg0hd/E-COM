@@ -1,30 +1,5 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img src="../assets/img/logoname2.png" alt="Electronic Shop">        
-  <div class="spacer-left"></div>
 
-    <div class="align-items-center">
-        <ul class="nav">
-            <li><a routerLink="/online-electronic-shop/home">HOME</a></li>
-            <li><a routerLink="/online-electronic-shop/shop" id="active">SHOP</a></li>
-            <li><a routerLink="/online-electronic-shop/profile">PROFILE</a></li>
-            <li><a href="#">ABOUT US</a></li>
-        </ul>
-    </div>
-    <div class="spacer-right"></div>
-        <div class="shop-bag position-relative" aria-label="Angular on twitter" target="_blank" rel="noopener" title="Shopping Bag" routerLink="/online-electronic-shop/my-cart">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                <rect width="400" height="400" fill="none"/>
-            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-            </svg>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                3
-            </span>        
-        </div>        
-  </div>
-  
+
   <div class="content" role="main">
   
     <!-- Resources -->
@@ -32,8 +7,29 @@
       <h3>Shop</h3>
       <p>Here are some links to help you get started:</p>
     </div>
-  
+
     <div class="card-container">
+      <ng-container *ngFor="let prodInfoTable of prodInfoTable">
+        <div class="card" target="_blank" rel="noopener" routerLink="">
+          <div class="card-text">
+
+            <!--Will Implement Image File Link-->
+            <img src="../assets/img/products/Breadboard.png" alt="image">
+            <h6>{{prodInfoTable.prod_name}}</h6>
+            <p>₱1{{prodInfoTable.prod_price}}</p>
+            <p>{{prodInfoTable.prod_desc}}</p>
+            <p>{{prodInfoTable.prod_quantity}}</p>
+          </div>
+        </div>
+      </ng-container>
+
+
+
+    </div>
+  
+    <!--<div class="card-container">
+
+
         <div class="card" target="_blank" rel="noopener"  routerLink="/online-electronic-shop/product-details">
             <div class="card-text">
                 <img src="../assets/img/products/Breadboard.png" alt="image">     
@@ -68,10 +64,10 @@
             </div>   
         </div>
   
-    </div>
+    </div>-->
 
     <!-- Resources 2 -->  
-    <div class="card-container">
+    <!--<div class="card-container">
         <div class="card" target="_blank" rel="noopener" routerLink="/online-electronic-shop/product-details">
             <div class="card-text">
                 <img src="../assets/img/products/LED.png" alt="image">           
@@ -104,10 +100,10 @@
             </div>   
         </div>
   
-    </div>
+    </div>-->
 
     <!-- Resources 3 -->  
-    <div class="card-container">
+    <!--<div class="card-container">
         <div class="card" target="_blank" rel="noopener" routerLink="/online-electronic-shop/product-details">
             <div class="card-text">
                 <img src="../assets/img/products/UTP cable.png" alt="image">         
@@ -124,10 +120,10 @@
             </div>    
         </div>
   
-    </div>
+    </div>-->
 
     <!--PAGINATOR-->
-    <div class="page-container">
+    <!--<div class="page-container">
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
@@ -141,7 +137,7 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </div>-->
 
     <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
       <title>Gray Clouds Background</title>
@@ -150,12 +146,5 @@
   
   </div>
 
-      <!-- Footer -->
-      <footer>
-        <div class="txt">
-          <p>© Electronic Shop <span>·</span> 2021</p>
-        </div>
-      </footer>
+   
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
