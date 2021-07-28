@@ -3,7 +3,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
 import {MatDialog} from '@angular/material/dialog';
-import { AddProductsComponent } from './add-products/add-products.component';
+//import { AddProductsComponent } from './add-products/add-products.component';
 
 @Component({
   selector: 'app-products',
@@ -31,13 +31,13 @@ export class ProductsComponent implements AfterViewInit {
   }
 
   //Modal ADD PRODUCTS
-  openAddProducts() {
-    const addProducts = this.dialog.open(AddProductsComponent);
+  // openAddProducts() {
+  //   const addProducts = this.dialog.open(AddProductsComponent);
 
-    addProducts.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
+  //   addProducts.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
+  // }
 }
 
 export interface ElectronicElement {
