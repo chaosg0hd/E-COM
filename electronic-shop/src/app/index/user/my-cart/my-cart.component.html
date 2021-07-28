@@ -14,7 +14,7 @@
 
   <div class="title-product">
     <h3>My Cart</h3>
-    <p>Here are some links to help you get started:</p>
+    <p></p>
   </div>
 
   <ng-container *ngFor="let cartInfoTable of cartInfoTable">
@@ -27,10 +27,14 @@
           <label class="form-check-label" for="flexCheckDefault">
             {{getProdName(cartInfoTable.prod_id)}}
           </label>
-          {{getProdDesc(cartInfoTable.prod_id)}}
-          <span>{{cartInfoTable.cart_total}} {{computeTotal(cartInfoTable.cart_total)}}</span>&nbsp;
+          <span style="font-size: 25px;">{{cartInfoTable.cart_total}} {{computeTotal(cartInfoTable.cart_total)}}</span>&nbsp;
 
-          <button mat-button> DELETE </button>
+          
+         
+          <button mat-raised-button color="warn" type="submit">
+              <mat-icon color="red">cancel</mat-icon>
+            </button>
+          
         </div>
       </div>
     </div>
@@ -39,12 +43,12 @@
 
 
   <div class="total">
-    <h6>Total Payment: <span id="price">{{getTotal()}}</span></h6>
+    <h6 style="font-size: 30px;">Total Payment: <span id="price">{{getTotal()}}</span></h6>
   </div>
 
   <!--PLACE ORDER BUTTON-->
   <div class="btn-order">
-    <button type="button" class="btn btn-danger btn-block" routerLink="/online-electronic-shop/my-cart/order-checkout">Check Out<span>(1)</span></button>
+    <button type="button" class="btn btn-danger btn-block" routerLink="/online-electronic-shop/my-cart/order-checkout" style="width: 125px; height: 40px;margin-left: 140px;">Check Out<span></span></button>
   </div>
 
   <br />
