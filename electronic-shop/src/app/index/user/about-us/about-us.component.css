@@ -1,155 +1,285 @@
-@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
-
-*{
-  margin: 0;
-  padding: 0;
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
   box-sizing: border-box;
-}
-img{
-    border-radius: 50%;
-}
-
-body { background-color: red !important; }
-
-.wrapper{
-  margin-top: 10%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper h1{
-  font-family: 'Poppins';
-  font-size: 52px;
-  margin-bottom: 200px;
-  text-align: center;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
 }
 
-.team{
+p {
+  margin: 0;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
   display: flex;
-  justify-content: center;
-  width: auto;
-  text-align: center;
-  flex-wrap: wrap;
+  align-items: center;
+  color: #585252;
+  font-weight: 600;
 }
 
-.team .team_member{
-  background: #fff;
-  margin: 5px;
-  margin-bottom: 50px;
-  width: 300px;
-  padding: 20px;
-  line-height: 20px;
-  color: #8e8b8b;  
-  position: relative;
+.toolbar img {
+  margin: 0 16px;
 }
 
-.team .team_member h3{
-  color: #FD3A5C;
-  font-size: 28px;
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
 }
 
-.team .team_member p.role{
-  color: #ccc;
-  margin: 12px 0;
-  font-size: 14px;
-  text-transform: uppercase;
+svg.material-icons {
+  height: 24px;
+  width: auto;
 }
 
-.team .team_member .team_img{
-  position: absolute;
-  top: -100px;
-  left: 100px;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #fff;
+svg.material-icons:not(:last-child) {
+  margin-right: 8px;
 }
 
-.team .team_member .team_img img{
-  width: 200px;
-  height: 150px;
-  padding: 5px;
+.card svg.material-icons path {
+  fill: #888;
 }
 
-/* * {
-    box-sizing: border-box;
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+  width: 100%;
  
-  .column {
-    float: left;
-    width: 33%;
-    padding: 50px;
-    height: 500px; 
-    border-radius: 6px;
-    
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    
-  }
+}
 
-  .via{
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-  }
- 
-  .gab{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-  img:hover {
-    background-color: yellow;
-  }
+.card {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 350px;
+  width: 250px;
+  margin: 0 30px 30px;
+  padding: 16px;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
 
-  .container {
-    position: relative;
-    width: 50%;
-  }
-  
-  .image {
-    opacity: 1;
-    display: block;
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+.card.card-small {
+  height: 16px;
+  width: 168px;
+}
+
+.card-container .card:not(.highlight-card) {
+  cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+  fill: rgb(105, 103, 103);
+}
+
+.card.highlight-card {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+}
+
+.card.card.highlight-card span {
+  margin-left: 60px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+  .card-container > *:not(.circle-link) ,
+  .terminal {
     width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
   }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .container:hover .image {
-    opacity: 0.3;
-  }
-  
-  .container:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  } */
 
-  /* .box-shadow{
-    background: #ccc;
-    box-shadow: 4px 3px 8px 1px #969696;
-    -webkit-box-shadow: 4px 3px 8px 1px #969696;
-    width: 500px;
-    height: 500px;
-} */
+  .card:not(.highlight-card) {
+    height: 16px;
+    margin: 8px 0;
+  }
+
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+
+  svg#rocket-smoke {
+    right: 120px;
+    transform: rotate(-5deg);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+/*EDIT CCS*/
+
+.card-container .card  svg {
+color: #585252;
+}
+
+
+.item-btn button{
+width: 180px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.card-text h6{
+text-align: center;
+color: #585252;
+
+}
+
+.page-container {
+padding-top: 25px;
+}
+
+.title-home {
+justify-content: center;
+text-align: center;
+padding: 20px;
+margin-top: 20px;
+}
+
+.card-container .card img {
+width: 165px;
+height: 162px;
+}
+
+h1, h3, h6 {
+font-family: Poppins;
+}
+
+.jumbotron h1{
+font-size: 70px;
+font-weight: 450;
+margin-top: 70px;
+padding-bottom: 40px;
+}
+
+.lead {
+padding-bottom: 20px;
+}
+
+.title-home h3 {
+font-weight: 500;
+font-size: 27px;
+font-family: Poppins;
+}
+
+#price, .total h6 {
+font-weight: 500;
+font-size: 16px;
+}
+
+.card-text h6, .card-text p {
+font-size: 14px;
+text-align: center;
+justify-content: center;
+}
+
+.card-text h6 {
+font-weight: 600;
+margin-top: 20px;
+}
+
+.card-text p {
+font-weight: 500;
+}
+
+#desc {
+font-size: 12px;
+padding-bottom: 10px;
+text-align: center;
+line-height: 17px;
+color: #887d7d;
+}
+
+#price {
+color: #fd3a5c;
+font-size: 18px;
+}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+.card-text h1 {
+font-size: 20px;
+text-align: center;
+font-weight: 500;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  padding: 20px;
+}
+
+th img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-left: 40px;
+}
+
+.details h3, .details p {
+  text-align: center;
+  justify-items: center;
+}
+
+.details h3 {
+  color: #fd3a5c;
+  font-weight: 600;
+}
+
+.details p {
+  color: #887d7d;
+}

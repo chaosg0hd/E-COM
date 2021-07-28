@@ -43,6 +43,7 @@
     max-width: 960px;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
   }
 
   svg.material-icons {
@@ -71,7 +72,7 @@
     border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 400px;
+    height: 350px;
     width: 250px;
     margin: 0 30px 30px;
     padding: 16px;
@@ -179,7 +180,7 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
-  margin-top: -80px;
+  margin-top: 20px;
 }
 
 .card-container .card img {
@@ -229,7 +230,7 @@ h1, h3, h6 {
 }
 
 #desc {
-  font-size: 20px;
+  font-size: 12px;
   padding-bottom: 10px;
   text-align: center;
   line-height: 17px;
@@ -238,7 +239,7 @@ h1, h3, h6 {
 
 #price {
   color: #fd3a5c;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .center {
@@ -246,4 +247,10 @@ h1, h3, h6 {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.card-text h1 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
 }

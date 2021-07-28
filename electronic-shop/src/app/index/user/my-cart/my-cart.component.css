@@ -549,6 +549,7 @@ h1, h3, h6 {
   font-weight: 500;
   font-size: 27px;
   font-family: Poppins;
+  margin-top: -80px;
 }
 
 #price, .total h6 {

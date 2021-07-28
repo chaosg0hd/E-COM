@@ -55,8 +55,8 @@ body { margin: 0; }
   flex: .7;
 }
 
-.shop-bag {
-    padding-right: 5%;
+mat-toolbar .shop-bag {
+    padding-right: 7%;
 }
 
 mat-toolbar mat-icon {
@@ -83,7 +83,7 @@ mat-toolbar button:hover{
   justify-content: center;
 }
 
-mat-toolbar, footer, .content, mat-button, mat-label, input matInput{
+mat-toolbar, footer, .content, mat-button, mat-label, input matInput, button{
   font-family: Poppins;
 }
 

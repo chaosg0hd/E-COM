@@ -1,7 +1,7 @@
 <!--HEADER-->
 <mat-toolbar class="mat-elevation-z8" style="padding: 8px; padding-top: 16px !important; vertical-align: middle; position: sticky; top: 0; z-index: 100">
 
-  <img src="../assets/img/logoname2.png" alt="Electronic Shop" routerLink="/online-electronic-shop/home">
+  <img src="../assets/img/logoname2.png" alt="Electronic Shop" routerLink="/home">
 
   <div class="spacer-left"></div>
 
@@ -12,22 +12,20 @@
 
   <div class="spacer-right"></div>
 
-  <div class="shop-bag position-relative" title="Shopping Bag" routerLink="/my-cart">
-    <mat-icon matBadge="{{badgeNoti}}" matBadgeColor="warn">shopping_basket</mat-icon>       
-  </div>
+  <!--CART BUTTON-->
+  <button mat-icon-button aria-label="Shopping Bag" routerLink="/my-cart" matTooltip="Shopping Bag">
+    <mat-icon matBadge="{{badgeNoti}}" matBadgeColor="warn">shopping_basket</mat-icon>  
+  </button>
+
+  <!--LOGOUT BUTTON-->
+  <button class="shop-bag" mat-icon-button aria-label="Exit App" matTooltip="Logout">
+    <mat-icon>exit_to_app</mat-icon> 
+  </button>
 
 </mat-toolbar>
 
 <router-outlet>
 
 </router-outlet>
-
-<!--FOOTER-->
-
-<mat-toolbar style="padding: 8px; padding-top: 16px !important; vertical-align: middle; position: sticky; bottom: 0;position: fixed; z-index: 100">
-  <footer>
-    <p>© Electronic Shop <span>·</span> 2021</p>
-  </footer>
-</mat-toolbar>
 
 
