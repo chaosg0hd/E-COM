@@ -21,18 +21,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //PASSWORD HIDE 
-  hide = true;
 
-  async regUser() {
+  //async regUser() {
 
-    this.userInfo.user_name = "Administrator";
-    this.userInfo.user_password = "12345";
+  //  this.userInfo.user_name = "Administrator";
+  //  this.userInfo.user_password = "12345";
 
-    await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {
-      console.log(res);
-    })
-  }
+  //  await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {
+  //    console.log(res);
+  //  })
+  //}
 
   async loginUser() {
     this.userInfo.user_name = this.user_name;
