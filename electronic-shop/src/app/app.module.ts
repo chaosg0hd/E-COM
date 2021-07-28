@@ -27,7 +27,7 @@ import { RegisterComponent } from './index/user/auth/register/register.component
 //import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 //import { ViewProductComponent } from './shop/view-product/view-product.component';
 
-/*import { ProfileAccComponent } from './profile-acc/profile-acc.component';*/
+import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
 
 //import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
 //import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
@@ -130,7 +130,7 @@ import { IndexComponent } from './index/index.component';
     //ViewProductComponent,
     //MyCartComponent,
     //OrderCheckoutComponent,
-    //ProfileAccComponent,
+    ProfileAccComponent,
     ///*PurchaseComponent,*/
     IndexComponent,
   ],

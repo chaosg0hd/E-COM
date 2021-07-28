@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
+/*import { EditProfileComponent } from './edit-profile/edit-profile.component';*/
 
 interface Food {
   value: string;
@@ -28,13 +28,13 @@ export class ProfileAccComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //Modal for Edit Profile
-  openEditProfile() {
-    const editProfile = this.dialog.open(EditProfileComponent);
+  ////Modal for Edit Profile
+  //openEditProfile() {
+  //  const editProfile = this.dialog.open(EditProfileComponent);
 
-    editProfile.afterClosed().subscribe(result => {
-      console.log('Dialog result');
-    });
-  }
+  //  editProfile.afterClosed().subscribe(result => {
+  //    console.log('Dialog result');
+  //  });
+  //}
 
 }

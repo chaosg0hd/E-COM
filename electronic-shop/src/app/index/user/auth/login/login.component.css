@@ -4,8 +4,39 @@
   align-items: center;
   justify-content: center;
   flex-direction: center;
+  font-family: Poppins;
+  overflow: hidden;
+  height: 100%;
 }
 
-  .container > * {
+.container > * {
     width: 40%;
-  }
+}
+
+.container h3 {
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 500;
+
+}
+
+#btn {
+  font-family: Poppins;
+  color: #e6ebf1;
+  background-color: #fd3a5c;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.container img{
+  justify-content: center;
+  width: 197px;
+  height: 35px;
+}
