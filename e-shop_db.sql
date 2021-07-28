@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2021 at 09:53 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.3.27
+-- Generation Time: Jul 28, 2021 at 12:12 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,46 +41,16 @@ CREATE TABLE `products_tb` (
 --
 
 INSERT INTO `products_tb` (`prod_no`, `prod_id`, `prod_name`, `prod_price`, `prod_quantity`, `prod_desc`) VALUES
-(1, 'NG8715', 'iaculis,', 80, 79, 'sapien imperdiet ornare. In faucibus. Morbi'),
-(2, 'TY0169', 'eget', 27, 47, 'Donec luctus aliquet odio. Etiam ligula tortor,'),
-(3, 'QQ8497', 'penatibus', 65, 24, 'enim. Nunc'),
-(4, 'RF4617', 'ultricies', 83, 59, 'consequat purus. Maecenas libero est, congue'),
-(5, 'FX4861', 'magna', 96, 97, 'Fusce'),
-(6, 'OC1244', 'ac,', 75, 56, 'cursus et, eros. Proin ultrices. Duis volutpat nunc sit amet'),
-(7, 'OM8457', 'purus.', 87, 81, 'risus. In mi pede, nonummy ut, molestie'),
-(8, 'NU9769', 'ac,', 49, 30, 'pharetra. Nam ac nulla.'),
-(9, 'BL8865', 'mauris.', 18, 5, 'nulla. In tincidunt congue turpis.'),
-(10, 'MP3113', 'enim.', 12, 75, 'eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas'),
-(11, 'NC9018', 'turpis.', 42, 63, 'posuere cubilia Curae; Phasellus ornare. Fusce mollis. Duis sit amet'),
-(12, 'DK6560', 'nec,', 75, 52, 'egestas.'),
-(13, 'PY0228', 'velit.', 58, 88, 'sit amet luctus vulputate,'),
-(14, 'PE4896', 'elementum', 49, 49, 'imperdiet dictum magna. Ut tincidunt orci quis'),
-(15, 'JS2924', 'a', 76, 17, 'iaculis nec, eleifend'),
-(16, 'VD7335', 'dolor', 57, 51, 'mollis nec, cursus a,'),
-(17, 'EU4926', 'nibh', 5, 15, 'dapibus'),
-(18, 'PP9716', 'Quisque', 88, 32, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'),
-(19, 'YB5704', 'risus.', 97, 39, 'tempor augue ac ipsum. Phasellus'),
-(20, 'DU4314', 'non,', 44, 70, 'feugiat tellus'),
-(21, 'MP7769', 'Aliquam', 58, 8, 'libero mauris, aliquam eu, accumsan'),
-(22, 'QD1839', 'consectetuer', 88, 64, 'risus. Quisque libero lacus, varius et, euismod'),
-(23, 'PG2749', 'blandit', 55, 92, 'egestas. Aliquam fringilla'),
-(24, 'IE4716', 'ligula.', 12, 26, 'tempus risus. Donec egestas.'),
-(25, 'NF1336', 'a,', 19, 93, 'urna, nec luctus felis purus'),
-(26, 'OZ8139', 'mus.', 75, 14, 'mauris ipsum porta elit, a'),
-(27, 'MC9823', 'lacinia', 19, 58, 'pellentesque eget, dictum placerat, augue.'),
-(28, 'HK5177', 'Integer', 42, 73, 'ante.'),
-(29, 'ZA7350', 'ligula.', 5, 38, 'rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi'),
-(30, 'VS4949', 'imperdiet,', 34, 100, 'conubia nostra, per'),
-(31, 'VS0830', 'ac', 90, 98, 'vitae, aliquet nec,'),
-(32, 'FQ1351', 'Ut', 7, 90, 'dignissim lacus. Aliquam rutrum lorem'),
-(33, 'AI2746', 'eros', 96, 6, 'mauris a'),
-(34, 'GF1532', 'sollicitudin', 87, 30, 'Proin vel arcu'),
-(35, 'PC7766', 'imperdiet', 2, 22, 'massa.'),
-(36, 'LM6987', 'sed', 12, 65, 'Praesent eu dui. Cum sociis natoque'),
-(37, 'XV7106', 'adipiscing', 42, 89, 'ultricies ligula. Nullam enim. Sed nulla'),
-(38, 'KC5821', 'nunc,', 27, 54, 'nisi. Mauris nulla.'),
-(39, 'NN8979', 'luctus', 7, 87, 'fames ac turpis egestas. Fusce aliquet magna a neque.'),
-(40, 'TH8804', 'non', 89, 87, 'dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus');
+(41, '1', 'Breadboard', 120, 10, 'A breadboard, or protoboard, is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used when slicing bread. In the 1970s the solderless breadboard became available and nowadays the term \"breadboard\" is commonly used to refer to these. Because the solderless breadboard does not require soldering, it is reusable.'),
+(42, '2', 'LAN Tester', 250, 5, 'LAN testers cover the fields of installation and network control. These LAN tester can be used in the workplace and are ideal for technical service professionals and network administrators. These LAN testers can determin e IP addresses, identify polarity, connected port and link connectivity. Furthermore, they can test fibre optic cables.'),
+(43, '3', 'UTP Cable', 20, 50, 'UTP cable is used extensively in local area networks, or LANs. Origins of UTP Cable Alexander Graham Bell was the first person to make a UTP cable by simply twisting two wires together. The basic design has changed little since 1881, and is still a pair of single conductors wrapped around each other inside an insulated jacket.\r\n'),
+(44, '4', 'Soldering Iron', 350, 10, 'A soldering iron is a hand tool used in soldering. It supplies heat to melt solder so that it can flow into the joint between two workpieces. A soldering iron is composed of a heated metal tip and an insulated handle. Heating is often achieved electrically, by passing an electric current (supplied through an electrical cord or battery cables) through a resistive heating element.'),
+(45, '5', 'Resistor', 15, 100, 'A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, and terminate transmission lines, among other uses.'),
+(46, '6', 'LED (Light-emitting Diode)', 5, 50, 'A light-emitting diode (LED) is a semiconductor light source that emits light when current flows through it. Electrons in the semiconductor recombine with electron holes, releasing energy in the form of photons. The color of the light is determined by the energy required for electrons to cross the band gap of the semiconductor. '),
+(47, '7', 'RJ-45', 10, 50, 'RJ45 plugs feature eight pins to which the wire strands of a cable interface electrically. Each plug has eight locations spaced about 1 mm apart into which individual wires are inserted using special cable crimping tools. The industry calls this type of connector8P8C, shorthand for eight position, eight contact. Ethernet cables and 8P8C connectors must be crimped into the RJ45 wiring pattern to function properly.'),
+(48, '8', 'Cable Wire', 30, 40, 'A wire is made of a single electrical conductor while a cable is a group or bundle of multiple wires inside a common sheathing. Both of them are used for carrying electrical current.'),
+(49, '9', 'LEAD', 7, 50, 'Lead is used in welding and soldering products like lead alloy solder traditionally used for jointing gas pipes in the UK. However, there is substantial evidence that lead can cause damage to the nervous system.'),
+(50, '10', 'Electric Tester Meter', 250, 10, 'Testing Tools: Electric meter testers, like a voltage tester, let you know if wires are active, so you don’t start working on potential live wires. A more sophisticated option is a multimeter , which can read voltage levels as well as other measurements, including amperage and resistance.');
 
 --
 -- Indexes for dumped tables
@@ -100,7 +70,7 @@ ALTER TABLE `products_tb`
 -- AUTO_INCREMENT for table `products_tb`
 --
 ALTER TABLE `products_tb`
-  MODIFY `prod_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `prod_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
