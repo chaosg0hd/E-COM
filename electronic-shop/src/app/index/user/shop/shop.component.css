@@ -71,9 +71,9 @@
     border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 350px;
+    height: 400px;
     width: 250px;
-    margin: 0 20px 20px;
+    margin: 0 30px 30px;
     padding: 16px;
     display: flex;
     /*flex-direction: row;*/
@@ -228,16 +228,16 @@ h1, h3, h6 {
 }
 
 #desc {
-  font-size: 12px;
+  font-size: 20px;
   padding-bottom: 10px;
   text-align: center;
-  line-height: 12px;
+  line-height: 17px;
   color: #887d7d;
 }
 
 #price {
   color: #fd3a5c;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 .center {
