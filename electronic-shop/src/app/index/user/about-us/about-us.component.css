@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+    border-radius: 50%;
+}
+
+body { background-color: red !important; }
+
+.wrapper{
+  margin-top: 10%;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3{
+  color: #FD3A5C;
+  font-size: 28px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role{
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -100px;
+  left: 100px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 200px;
+  height: 150px;
+  padding: 5px;
+}
+
+/* * {
+    box-sizing: border-box;
+  }
+ 
+  .column {
+    float: left;
+    width: 33%;
+    padding: 50px;
+    height: 500px; 
+    border-radius: 6px;
+    
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+  .via{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+  }
+ 
+  .gab{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  img:hover {
+    background-color: yellow;
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  } */
+
+  /* .box-shadow{
+    background: #ccc;
+    box-shadow: 4px 3px 8px 1px #969696;
+    -webkit-box-shadow: 4px 3px 8px 1px #969696;
+    width: 500px;
+    height: 500px;
+} */

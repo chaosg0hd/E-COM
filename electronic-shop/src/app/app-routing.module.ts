@@ -14,6 +14,7 @@ import { RegisterComponent } from './index/user/auth/register/register.component
 import { HomeComponent } from './index/user/home/home.component';
 import { ShopComponent } from './index/user/shop/shop.component';
 import { ViewProductComponent } from './index/user/shop/view-product/view-product.component';
+import { AboutUsComponent } from './index/user/about-us/about-us.component';
 
 import { MyCartComponent } from './index/user/my-cart/my-cart.component';
 
@@ -48,6 +49,12 @@ const routes: Routes = [
     path: 'home', component: IndexComponent, children:
       [
         { path: '', component: HomeComponent },
+      ]
+  },
+  {
+    path: 'aboutus', component: IndexComponent, children:
+      [
+        { path: '', component: AboutUsComponent },
       ]
   },
   {

@@ -113,6 +113,7 @@ import { MatTableModule } from '@angular/material/table';
 /*import { PurchaseComponent } from './profile-acc/purchase/purchase.component';*/
 
 import { IndexComponent } from './index/index.component';
+import { AboutUsComponent } from './index/user/about-us/about-us.component';
 
 
 
@@ -134,7 +135,8 @@ import { IndexComponent } from './index/index.component';
     ProfileAccComponent,
 
     AdminComponent,
-    DashboardComponent,    
+    DashboardComponent,
+    AboutUsComponent,    
 
     //DeliveryComponent,   
     
