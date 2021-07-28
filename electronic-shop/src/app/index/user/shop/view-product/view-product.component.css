@@ -509,6 +509,7 @@ h1, h3, h6 {
 
 .lead {
   padding-bottom: 20px;
+  font-size: 20px;
 }
 
 .title-home h3, .title-product h3{
