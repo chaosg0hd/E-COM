@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+//import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { DataService } from 'src/app/services/data.service';
@@ -27,7 +29,7 @@ export class ShopComponent implements OnInit {
   //ViewChild
 
   ngOnInit(): void {
-    this.pullAllProd();
+    this.pullAllProd();    
   }
 
   //ngLifeCycle Goes Here
@@ -35,7 +37,7 @@ export class ShopComponent implements OnInit {
 
   //ngOnInit Functions
 
-  //PRODUCT METHOS
+  //PRODUCT METHODS
 
 
   prodInfoTable: prodTable[] = [];
@@ -47,6 +49,13 @@ export class ShopComponent implements OnInit {
     });
     console.log(this.prodInfoTable + ' From Shop Page: Method pullAllProd');
   }
+
+
+  //PAGINATION
+
+
+
+
 
 
   //Add To Cart Modal
