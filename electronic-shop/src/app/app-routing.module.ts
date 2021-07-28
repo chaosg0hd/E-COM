@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LoginComponent } from './index/user/auth/login/login.component';
-//import { RegisterComponent } from './auth/register/register.component';
+import { RegisterComponent } from './index/user/auth/register/register.component';
 
 import { HomeComponent } from './index/user/home/home.component';
 import { ShopComponent } from './index/user/shop/shop.component';
@@ -18,7 +18,7 @@ import { ShopComponent } from './index/user/shop/shop.component';
 //import { ViewProductComponent } from './shop/view-product/view-product.component';
 //import { MyCartComponent } from './my-cart/my-cart.component';
 //import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
-//import { ProfileAccComponent } from './profile-acc/profile-acc.component';
+import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
 
 
 /*import { PurchaseComponent } from './profile-acc/purchase/purchase.component';*/
@@ -33,23 +33,33 @@ const routes: Routes = [
 
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  {
+    path: 'login', component: LoginComponent
+
+  },
+  {
+    path: 'register', component: RegisterComponent
+
+  },
 
   {
     path: 'home', component: IndexComponent, children:
       [
         { path: '', component: HomeComponent },
       ]
-  },
-
-  {
-    path: 'login', component: LoginComponent 
-      
-  },
+  }, 
 
   {
     path: 'shop', component: IndexComponent, children:
       [
         { path: '', component: ShopComponent },
+      ]
+  },
+
+  {
+    path: 'profile', component: IndexComponent, children:
+      [
+        { path: '', component: ProfileAccComponent },
       ]
   },
 

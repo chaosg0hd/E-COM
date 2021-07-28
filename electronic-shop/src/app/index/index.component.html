@@ -5,7 +5,7 @@
 
   <div class="spacer-left"></div>
 
-  <button mat-button>HOME</button>
+  <button mat-button routerLink="/home">HOME</button>
   <button mat-button routerLink="/shop">SHOP</button>
   <button mat-button>PROFILE</button>
   <button mat-button>ABOUT US</button>
@@ -23,6 +23,11 @@
 </router-outlet>
 
 <!--FOOTER-->
-<footer>
-  <p>© Electronic Shop <span>·</span> 2021</p>
-</footer>
+
+<mat-toolbar style="padding: 8px; padding-top: 16px !important; vertical-align: middle; position: sticky; bottom: 0;position: fixed; z-index: 100">
+  <footer>
+    <p>© Electronic Shop <span>·</span> 2021</p>
+  </footer>
+</mat-toolbar>
+
+

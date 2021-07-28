@@ -5,24 +5,37 @@
   <img src="../assets/img/logoname2.png" alt="Electronic Shop Logo">
 
   <h3>Login</h3>
-  
-  <!--EMAIL FIELD-->
-  <mat-form-field appearance="outline">
-    <mat-label>Email</mat-label>
-    <input matInput placeholder="pat@example.com">
+
+  <mat-form-field>
+    <mat-icon matPrefix>person</mat-icon>
+    <input [(ngModel)]="user_name" type="text" matInput placeholder="User Name">
   </mat-form-field>
 
+  <mat-form-field>
+    <mat-icon matPrefix>lock</mat-icon>
+    <input [(ngModel)]="user_password" type="password" matInput placeholder="Password">
+  </mat-form-field>
+
+  <!--EMAIL FIELD-->
+  <!--<mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="pat@example.com">
+  </mat-form-field>-->
   <!--PASSWORD FIELD-->
-  <mat-form-field appearance="outline">
+  <!--<mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'" >
+    <input matInput [type]="hide ? 'password' : 'text'">
     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
-  </mat-form-field>
+  </mat-form-field>-->
 
-  <button id="btn" mat-raised-button type="submit">Login</button>
+  <button id="btn" mat-raised-button type="submit" (click)="loginUser()">Login</button><br/>
+
+  <button id="btn" mat-raised-button type="submit" routerLink="/register">Register</button>
+
 </div>
+
 
 <!--BACKGROUND SVG-->
 <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
