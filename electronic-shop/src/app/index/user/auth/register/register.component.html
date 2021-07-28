@@ -3,35 +3,45 @@
 <div class="container">
 
   <img src="../assets/img/logoname2.png" alt="Electronic Shop Logo">
-  <mat-form-field>
-    <input matInput placeholder="Full Name" formControlName="name">
+
+  <mat-form-field appearance="fill">
+    <input matInput [(ngModel)]="full_name" placeholder="Full Name" />
+
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput [(ngModel)]="user_name" placeholder="Username" />
 
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Username" formControlName="username">
+    <input matInput [(ngModel)]="user_name" placeholder="Email" type="email" />
 
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Email" formControlName="email">
+    <input matInput [(ngModel)]="user_name" placeholder="Email" type="email" />
 
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput type="password" placeholder="Password" formControlName="password">
+    <input matInput [(ngModel)]="user_address" placeholder="Address" />
 
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput type="password" placeholder="Password COnfirmation" formControlName="confirmPassword">
+    <input matInput [(ngModel)]="user_password" placeholder="Password" type="password" />
 
   </mat-form-field>
 
-  <button id="btn" mat-raised-button type="submit" routerLink="/register">Register</button>
+  <mat-form-field>
+    <input matInput [(ngModel)]="user_password" placeholder="Confirm Password" type="password" />
 
-  
+  </mat-form-field>
 
+  <button id="btn" mat-raised-button type="submit">Register</button>
+
+</div>
   
 
 

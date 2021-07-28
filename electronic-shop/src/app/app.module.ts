@@ -23,10 +23,9 @@ import { DashboardComponent } from './index/admin/dashboard/dashboard.component'
 import { LoginComponent } from './index/user/auth/login/login.component';
 import { RegisterComponent } from './index/user/auth/register/register.component';
 
-//import { BuyNowComponent } from './shop/buy-now/buy-now.component';
-//import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
 //import { MyCartComponent } from './my-cart/my-cart.component';
-//import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
+
+import { OrderCheckoutComponent } from './index/user/my-cart/order-checkout/order-checkout.component';
 
 
 import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
@@ -142,7 +141,7 @@ import { AboutUsComponent } from './index/user/about-us/about-us.component';
     
     //BuyNowComponent,
     //AddToCartComponent,
-    //OrderCheckoutComponent,
+    OrderCheckoutComponent,
     
     ///*PurchaseComponent,*/
   ],
