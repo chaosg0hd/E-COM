@@ -403,6 +403,7 @@
 
 h1, h3, h6 {
   font-family: Poppins;
+  font-size: 15px;
 }
 
 .jumbotron h1{
@@ -444,4 +445,8 @@ footer span {
   text-align: center;
   justify-content: center;
   justify-self: center;
+}
+
+.h6 {
+  
 }
