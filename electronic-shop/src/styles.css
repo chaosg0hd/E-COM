@@ -83,7 +83,7 @@ mat-toolbar button:hover{
   justify-content: center;
 }
 
-mat-toolbar, footer, .content, mat-button, mat-label, input matInput{
+mat-toolbar, footer, .content, mat-button, mat-label, input matInput, button{
   font-family: Poppins;
 }
 
