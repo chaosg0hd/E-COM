@@ -76,7 +76,24 @@
 					}
 				break;
 
-      // Emp Operations
+		// Cart Operations
+
+        case 'addCart':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo json_encode($post->addCart($d), JSON_PRETTY_PRINT);
+				break;
+
+        case 'pullAllCart':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo $d;
+            if(count($req)>1) {                       
+						echo json_encode($get->pullAllCart($d), JSON_PRETTY_PRINT);
+					} else {
+						echo json_encode($get->pullAllCart($d), JSON_PRETTY_PRINT);
+					}
+				break;
+
+		// Emp Operations
 
         case 'pullAllEmp':
 					$d = json_decode(base64_decode(file_get_contents("php://input")));

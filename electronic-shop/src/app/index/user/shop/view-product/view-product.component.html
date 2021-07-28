@@ -16,7 +16,7 @@
 
   <div class="home-content">
     <div class="side-picture">
-      <img src="../assets/img/products/currenttester.png" alt=" Product Image">
+      <img src="{{prodInfoTable[0].prod_image}}" alt=" Product Image">
 
     </div>
 
@@ -49,8 +49,8 @@
         <span id="sold"><span>59</span> Sold</span>
       </div>-->
       <div class="inBox">
-      <!--Product Price-->
-        <p class="lead">PHP : {{prodInfoTable[0].prod_price}}</p>
+        <!--Product Price-->
+        <p class="lead">UNIT PRICE PHP : {{prodInfoTable[0].prod_price}}</p>
 
         <div class="shipping">
           <span>Shipping:</span>
@@ -64,15 +64,24 @@
         </div>
 
         <div class="quanti">
-          <!--<span>Quantity:</span>
-      <input id=itemQuantity type=number min=1 max=110 placeholder="1">-->
-          <span><span id="colored">{{prodInfoTable[0].prod_quantity}}</span> Pieces available</span>
-        </div>
+          <span>Quantity:</span>
+          <input id=itemQuantity [(ngModel)]="prod_quantity" type=number min=1 max={{prodInfoTable[0].prod_quantity}} placeholder="1">
 
-        <a class="btn btn-outline-danger btn-sm btn-block" id="outline-btn" (click)="openBar(message.value)" role="button">Add to Cart</a>
-        <a class="btn btn-danger btn-sm btn-block" routerLink="/online-electronic-shop/my-cart/order-checkout" role="button">Buy Now</a>
+          <span><span id="colored">{{prodInfoTable[0].prod_quantity }}</span> Pieces available</span>
+        </div>      
 
-        <input matInput value="Added to Cart" #message hidden><!--Snackbar text-->
+        <mat-divider></mat-divider>
+        <br />
+        <p class="lead">TOTAL PRICE  PHP : {{getTotal(prodInfoTable[0].prod_price)}}</p>
+
+
+        <a class="btn btn-outline-danger btn-sm btn-block" id="outline-btn" (click)="addToCart(prodInfoTable[0].prod_quantity)" role="button">Add to Cart</a>
+        <!--<a class="btn btn-danger btn-sm btn-block" routerLink="/online-electronic-shop/my-cart/order-checkout" role="button">Buy Now</a>-->
+
+        <!--Snackbar text, di ko alam panu mo nalagay dito ung snackbar, peru oki hahahahaha-->
+
+        <input matInput value="Added to Cart" #message hidden>
+
       </div>
     </div>
   </div>
@@ -160,3 +169,31 @@
   </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
