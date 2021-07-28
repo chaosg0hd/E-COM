@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 export interface prodTable {
   prod_no: string;
@@ -24,7 +25,7 @@ export class ShopComponent implements OnInit {
 
   //CONSTRUCTORS
 
-  constructor(private data: DataService, public dialog: MatDialog) { }
+  constructor(private data: DataService, public dialog: MatDialog, public router: Router) { }
 
   //ViewChild
 
@@ -33,7 +34,6 @@ export class ShopComponent implements OnInit {
   }
 
   //ngLifeCycle Goes Here
-
 
   //ngOnInit Functions
 
@@ -50,13 +50,15 @@ export class ShopComponent implements OnInit {
     console.log(this.prodInfoTable + ' From Shop Page: Method pullAllProd');
   }
 
+  //View Product
+
+  viewProducts(prod: any) {
+    this.data.storeData(prod);
+    this.router.navigate(['/view-product']);
+  }
+
 
   //PAGINATION
-
-
-
-
-
 
   //Add To Cart Modal
   addToCart() {

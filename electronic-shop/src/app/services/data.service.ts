@@ -10,6 +10,19 @@ export class DataService {
 
   constructor(private http: HttpClient, private datepipe: DatePipe) { }
 
+
+  //STORE
+
+  dataStore: any = []
+
+  storeData(data: any) {
+    this.dataStore = data;
+  }
+
+  getData() {
+    return <any>(this.dataStore);
+  }
+
   //HTTP LANG DITO
 
   //API Request Method

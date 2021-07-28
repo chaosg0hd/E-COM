@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 
-//import { AdminComponent } from './admin/admin.component';
+import { AdminComponent } from './index/admin/admin.component';
+import { DashboardComponent } from './index/admin/dashboard/dashboard.component';
 //import { DeliveryComponent } from './delivery/delivery.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,14 +13,15 @@ import { RegisterComponent } from './index/user/auth/register/register.component
 
 import { HomeComponent } from './index/user/home/home.component';
 import { ShopComponent } from './index/user/shop/shop.component';
+import { ViewProductComponent } from './index/user/shop/view-product/view-product.component';
+
 
 //import { BuyNowComponent } from './shop/buy-now/buy-now.component';
 //import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
-//import { ViewProductComponent } from './shop/view-product/view-product.component';
+
 //import { MyCartComponent } from './my-cart/my-cart.component';
 //import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
-
 
 /*import { PurchaseComponent } from './profile-acc/purchase/purchase.component';*/
 
@@ -41,29 +43,37 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
 
   },
-
   {
     path: 'home', component: IndexComponent, children:
       [
         { path: '', component: HomeComponent },
       ]
-  }, 
-
+  },
   {
     path: 'shop', component: IndexComponent, children:
       [
         { path: '', component: ShopComponent },
       ]
   },
-
+  {
+    path: 'view-product', component: IndexComponent, children:
+      [
+        { path: '', component: ViewProductComponent },
+      ]
+  },
   {
     path: 'profile', component: IndexComponent, children:
       [
         { path: '', component: ProfileAccComponent },
       ]
   },
+  {
+    path: 'admin', component:  AdminComponent, children:
+      [
+        { path: '', component: DashboardComponent },
+      ]
+  },
 
-  /*{ path: oes + '/index', component: IndexComponent },*/
 
   //{ path: oes + '/home', component: HomeComponent },
   //{ path: oes + '/login', component : LoginComponent},

@@ -10,13 +10,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeComponent } from './index/user/home/home.component';
 import { ShopComponent } from './index/user/shop/shop.component';
+import { ViewProductComponent } from './index/user/shop/view-product/view-product.component';
+
+import { AdminComponent } from './index/admin/admin.component';
+import { DashboardComponent } from './index/admin/dashboard/dashboard.component';
 
 
-//import { AdminComponent } from './admin/admin.component';
 //import { DeliveryComponent } from './delivery/delivery.component';
-
-
-
 
 import { LoginComponent } from './index/user/auth/login/login.component';
 import { RegisterComponent } from './index/user/auth/register/register.component';
@@ -25,7 +25,7 @@ import { RegisterComponent } from './index/user/auth/register/register.component
 //import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
 //import { MyCartComponent } from './my-cart/my-cart.component';
 //import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
-//import { ViewProductComponent } from './shop/view-product/view-product.component';
+
 
 import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
 
@@ -118,21 +118,28 @@ import { IndexComponent } from './index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
+    IndexComponent,
 
-    HomeComponent,
     LoginComponent,
     RegisterComponent,
-    //AdminComponent,
-    //DeliveryComponent,
+
+    HomeComponent,
     ShopComponent,
+    ViewProductComponent,
+
+    ProfileAccComponent,
+
+    AdminComponent,
+    DashboardComponent,    
+
+    //DeliveryComponent,   
+    
     //BuyNowComponent,
-    //AddToCartComponent,
-    //ViewProductComponent,
+    //AddToCartComponent,,
     //MyCartComponent,
     //OrderCheckoutComponent,
-    ProfileAccComponent,
+    
     ///*PurchaseComponent,*/
-    IndexComponent,
   ],
   imports: [
     BrowserModule,
@@ -186,8 +193,6 @@ import { IndexComponent } from './index/index.component';
     FormsModule, 
     ReactiveFormsModule,
     MatInputModule,
-
-    /*HttpClientModule*/
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
