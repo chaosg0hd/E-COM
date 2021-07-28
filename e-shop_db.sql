@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2021 at 12:12 PM
+-- Generation Time: Jul 28, 2021 at 03:18 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -33,24 +33,26 @@ CREATE TABLE `products_tb` (
   `prod_name` varchar(50) NOT NULL,
   `prod_price` double NOT NULL,
   `prod_quantity` int(50) NOT NULL,
-  `prod_desc` text NOT NULL
+  `prod_desc` text NOT NULL,
+  `prod_category` varchar(50) NOT NULL,
+  `prod_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products_tb`
 --
 
-INSERT INTO `products_tb` (`prod_no`, `prod_id`, `prod_name`, `prod_price`, `prod_quantity`, `prod_desc`) VALUES
-(41, '1', 'Breadboard', 120, 10, 'A breadboard, or protoboard, is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used when slicing bread. In the 1970s the solderless breadboard became available and nowadays the term \"breadboard\" is commonly used to refer to these. Because the solderless breadboard does not require soldering, it is reusable.'),
-(42, '2', 'LAN Tester', 250, 5, 'LAN testers cover the fields of installation and network control. These LAN tester can be used in the workplace and are ideal for technical service professionals and network administrators. These LAN testers can determin e IP addresses, identify polarity, connected port and link connectivity. Furthermore, they can test fibre optic cables.'),
-(43, '3', 'UTP Cable', 20, 50, 'UTP cable is used extensively in local area networks, or LANs. Origins of UTP Cable Alexander Graham Bell was the first person to make a UTP cable by simply twisting two wires together. The basic design has changed little since 1881, and is still a pair of single conductors wrapped around each other inside an insulated jacket.\r\n'),
-(44, '4', 'Soldering Iron', 350, 10, 'A soldering iron is a hand tool used in soldering. It supplies heat to melt solder so that it can flow into the joint between two workpieces. A soldering iron is composed of a heated metal tip and an insulated handle. Heating is often achieved electrically, by passing an electric current (supplied through an electrical cord or battery cables) through a resistive heating element.'),
-(45, '5', 'Resistor', 15, 100, 'A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. In electronic circuits, resistors are used to reduce current flow, adjust signal levels, to divide voltages, bias active elements, and terminate transmission lines, among other uses.'),
-(46, '6', 'LED (Light-emitting Diode)', 5, 50, 'A light-emitting diode (LED) is a semiconductor light source that emits light when current flows through it. Electrons in the semiconductor recombine with electron holes, releasing energy in the form of photons. The color of the light is determined by the energy required for electrons to cross the band gap of the semiconductor. '),
-(47, '7', 'RJ-45', 10, 50, 'RJ45 plugs feature eight pins to which the wire strands of a cable interface electrically. Each plug has eight locations spaced about 1 mm apart into which individual wires are inserted using special cable crimping tools. The industry calls this type of connector8P8C, shorthand for eight position, eight contact. Ethernet cables and 8P8C connectors must be crimped into the RJ45 wiring pattern to function properly.'),
-(48, '8', 'Cable Wire', 30, 40, 'A wire is made of a single electrical conductor while a cable is a group or bundle of multiple wires inside a common sheathing. Both of them are used for carrying electrical current.'),
-(49, '9', 'LEAD', 7, 50, 'Lead is used in welding and soldering products like lead alloy solder traditionally used for jointing gas pipes in the UK. However, there is substantial evidence that lead can cause damage to the nervous system.'),
-(50, '10', 'Electric Tester Meter', 250, 10, 'Testing Tools: Electric meter testers, like a voltage tester, let you know if wires are active, so you don’t start working on potential live wires. A more sophisticated option is a multimeter , which can read voltage levels as well as other measurements, including amperage and resistance.');
+INSERT INTO `products_tb` (`prod_no`, `prod_id`, `prod_name`, `prod_price`, `prod_quantity`, `prod_desc`, `prod_category`, `prod_image`) VALUES
+(41, '1', 'Breadboard', 120, 10, 'A breadboard, or protoboard, is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used when slicing bread.', 'Wires', '../assets/img/Breadboard.png'),
+(42, '2', 'LAN Tester', 250, 5, 'LAN testers cover the fields of installation and network control. These LAN tester can be used in the workplace and are ideal for technical service professionals and network administrators.', 'Tester', '../assets/img/internettester.png'),
+(43, '3', 'UTP Cable', 20, 50, 'UTP cable is used extensively in local area networks, or LANs. Origins of UTP Cable Alexander Graham Bell was the first person to make a UTP cable by simply twisting two wires together.\r\n', 'Wires', '../assets/img/UTPcable.png'),
+(44, '4', 'Soldering Iron', 350, 10, 'A soldering iron is a hand tool used in soldering. It supplies heat to melt solder so that it can flow into the joint between two workpieces. A soldering iron is composed of a heated metal tip and an insulated handle.', 'Solderings', '../assets/img/solderingiron.png'),
+(45, '5', 'Resistor', 15, 100, 'A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. ', 'Wires', '../assets/img/resistor.png'),
+(46, '6', 'LED (Light-emitting Diode)', 5, 50, 'A light-emitting diode (LED) is a semiconductor light source that emits light when current flows through it. Electrons in the semiconductor recombine with electron holes, releasing energy in the form of photons. ', 'Lights', '../assets/img/LED.png'),
+(47, '7', 'RJ-45', 10, 50, 'RJ45 plugs feature eight pins to which the wire strands of a cable interface electrically. Each plug has eight locations spaced about 1 mm apart into which individual wires are inserted using special cable crimping tools.', 'Wires', '../assets/img/rj45.png'),
+(48, '8', 'Cable Wire', 30, 40, 'A wire is made of a single electrical conductor while a cable is a group or bundle of multiple wires inside a common sheathing. Both of them are used for carrying electrical current.', 'Wires', '../assets/img/wire.png'),
+(49, '9', 'LEAD', 7, 50, 'Lead is used in welding and soldering products like lead alloy solder traditionally used for jointing gas pipes in the UK. However, there is substantial evidence that lead can cause damage to the nervous system.', 'Wires', '../assets/img/lead.png'),
+(50, '10', 'Electric Tester Meter', 250, 10, 'Testing Tools: Electric meter testers, like a voltage tester, let you know if wires are active, so you don’t start working on potential live wires.', 'Tester', '../assets/img/currenttester.png');
 
 --
 -- Indexes for dumped tables
@@ -61,16 +63,6 @@ INSERT INTO `products_tb` (`prod_no`, `prod_id`, `prod_name`, `prod_price`, `pro
 --
 ALTER TABLE `products_tb`
   ADD PRIMARY KEY (`prod_no`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `products_tb`
---
-ALTER TABLE `products_tb`
-  MODIFY `prod_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

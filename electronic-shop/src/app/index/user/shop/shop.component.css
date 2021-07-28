@@ -179,6 +179,7 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
+  margin-top: -80px;
 }
 
 .card-container .card img {

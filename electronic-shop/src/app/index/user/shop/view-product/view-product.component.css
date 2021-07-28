@@ -544,3 +544,9 @@ h1, h3, h6 {
 
 }
 
+.inBox {
+  width: 500px;
+  padding: 10px;
+  border: 2px solid rgb(83, 83, 83);
+  margin: 0;
+}

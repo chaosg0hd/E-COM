@@ -13,6 +13,8 @@ export interface prodTable {
   prod_price: string;
   prod_quantity: string;
   prod_desc: string;  
+  prod_category: string;
+  prod_image: string;
 }
 
 
