@@ -42,9 +42,7 @@ export class ViewProductComponent implements OnInit {
   ngOnInit(): void {
     this.getData();
     this.getUser();
-
   }
-
 
   prodInfoTable: prodTable[] = [];
     
@@ -89,12 +87,12 @@ export class ViewProductComponent implements OnInit {
 
     console.log(this.cartInfo)
 
-
     this.data.sendApiRequest("addCart", this.cartInfo).subscribe((data: any) => {
       this.prodInfoTable = data.payload;
 
       this.openBar('ADDED TO CART');
-      this.route.navigate(['/view-product'])
+      /*this.route.navigate(['/view-product']);*/
+      
     });
   }
 
