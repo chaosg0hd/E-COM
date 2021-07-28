@@ -26,9 +26,9 @@ import { MyCartComponent } from './index/user/my-cart/my-cart.component';
 import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
 
 /*import { PurchaseComponent } from './profile-acc/purchase/purchase.component';*/
-
+import { OrdersComponent } from './index/admin/orders/orders.component';
 import { IndexComponent } from './index/index.component';
-
+import { ProductsComponent } from './index/admin/products/products.component';
 
 //try natin iwsan mga long url names
 /*var oes = "online-electronic-shop";*/
@@ -49,6 +49,18 @@ const routes: Routes = [
     path: 'home', component: IndexComponent, children:
       [
         { path: '', component: HomeComponent },
+      ]
+  },
+  {
+    path: 'product', component: AdminComponent, children:
+      [
+        { path: '', component: ProductsComponent },
+      ]
+  },
+  {
+    path: 'order', component: AdminComponent, children:
+      [
+        { path: '', component: OrdersComponent },
       ]
   },
   {

@@ -114,7 +114,8 @@ import { MatTableModule } from '@angular/material/table';
 
 import { IndexComponent } from './index/index.component';
 import { AboutUsComponent } from './index/user/about-us/about-us.component';
-
+import { OrdersComponent } from './index/admin/orders/orders.component';
+import { ProductsComponent } from './index/admin/products/products.component';
 
 
 
@@ -122,9 +123,10 @@ import { AboutUsComponent } from './index/user/about-us/about-us.component';
   declarations: [
     AppComponent,
     IndexComponent,
-
+    OrdersComponent,
     LoginComponent,
     RegisterComponent,
+    
 
     HomeComponent,
     ShopComponent,
@@ -133,7 +135,7 @@ import { AboutUsComponent } from './index/user/about-us/about-us.component';
     MyCartComponent,
 
     ProfileAccComponent,
-
+    ProductsComponent,
     AdminComponent,
     DashboardComponent,
     AboutUsComponent,    
@@ -151,6 +153,7 @@ import { AboutUsComponent } from './index/user/about-us/about-us.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+
 
     // Material Cons Imports
 
