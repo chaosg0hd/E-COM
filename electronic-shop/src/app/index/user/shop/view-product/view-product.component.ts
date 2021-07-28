@@ -31,7 +31,8 @@ export class ViewProductComponent implements OnInit {
 
   }
 
-  prod_data: prodTable[] = []
+  prodInfoTable: prodTable[] = [];
+
   prod_no: any = '';
   prod_id: any = '';
   prod_name: any = '';
@@ -40,8 +41,8 @@ export class ViewProductComponent implements OnInit {
   prod_desc: any = '';
 
   getData() {
-    this.prod_data = this.data.dataStore;
-    console.log(this.prod_data);    
+    this.prodInfoTable[0] = this.data.dataStore;
+    console.log(this.prodInfoTable[0]);
   }
 
 }
