@@ -75,12 +75,16 @@
             $encryptedPassword = $this->encrypt_password($dt->user_password);
 
             $payload = array(
+				'full_name'=>$dt->full_name,
                 'user_name'=>$dt->user_name,
+				'user_email'=>$dt->user_email,
+				'user_contact'=>$dt->user_contact,
+				'user_address'=>$dt->user_email,
                 'user_password'=>$this->encrypt_password($dt->user_password)
             );
 
-            $sql = "INSERT INTO user_tb( user_name, user_password) 
-                           VALUES ('$dt->user_name', '$encryptedPassword')";                     
+            $sql = "INSERT INTO user_tb( full_name, user_name, user_password, user_email, user_contact, user_address) 
+                           VALUES ('$dt->full_name','$dt->user_name', '$encryptedPassword','$dt->user_email','$dt->user_contact','$dt->user_address')";                     
 
                            $data = array(); $code = 0; $errmsg= ""; $remarks = "";
                            try {

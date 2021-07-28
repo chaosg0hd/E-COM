@@ -14,14 +14,19 @@ export class RegisterComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.regUserxxxxx();
   }
 
   async regUserxxxxx() {
 
     //One Time Create User and PW
 
-    this.userInfo.user_name = "Admin";
-    this.userInfo.user_password = "12345";
+    this.userInfo.full_name = "ADMINISTORUM";
+    this.userInfo.user_name = "ADMIN";
+    this.userInfo.user_address = "ADMIN BUILDING";
+    this.userInfo.user_email = "ADMIN@ADMIN";
+    this.userInfo.user_tel = "ADMIN"
+    this.userInfo.user_password = "ADMIN"
 
     await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {
       console.log(res);
@@ -32,14 +37,19 @@ export class RegisterComponent implements OnInit {
   user_name: any;
   full_name: any;
   user_address: any;
+  user_email: any;
+  user_contact: any;
   user_password: any;
 
   async regUser() {
 
-    //One Time Create User and PW
+    this.userInfo.full_name = this.full_name;
+    this.userInfo.user_name = this.user_name;
+    this.userInfo.user_address = this.user_address;
+    this.userInfo.user_email = this.user_email;
+    this.userInfo.user_contact = this.user_contact;
+    this.userInfo.user_password = this.user_password;
 
-    this.userInfo.user_name = "Admin";
-    this.userInfo.user_password = "12345";
 
     await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {
       console.log(res);
