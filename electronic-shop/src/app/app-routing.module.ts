@@ -67,6 +67,7 @@ const routes: Routes = [
         { path: '', component: AboutUsComponent },
       ]
   },
+
   {
     path: 'shop', component: IndexComponent, children:
       [

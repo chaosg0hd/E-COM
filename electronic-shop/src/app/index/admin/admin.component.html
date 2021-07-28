@@ -9,12 +9,15 @@
   <button mat-button routerLink="/product">Product</button>
   <button mat-button>ABOUT US</button>
 
+  <div class="spacer-left"></div>
   <div class="spacer-right"></div>
-
-  <div class="shop-bag position-relative" target="_blank" rel="noopener" title="Shopping Bag" routerLink="/online-electronic-shop/my-cart">
-    <mat-icon matBadge="3" matBadgeColor="warn">shopping_basket</mat-icon>
-  </div>
-
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon>exit_to_app</mat-icon>
+ </button>
+  
 </mat-toolbar>
 
 <router-outlet>
