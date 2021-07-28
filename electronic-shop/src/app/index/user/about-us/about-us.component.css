@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 img{
     border-radius: 50%;
 }
 
-body { background-color: red !important; }
+body { 
+  background-color: red !important;
+  font-family: Poppins;
+}
 
 .wrapper{
   margin-top: 10%;
 }
 
 .wrapper h1{
-  font-family: 'Poppins';
+  font-family: Poppins;
   font-size: 52px;
   margin-bottom: 200px;
   text-align: center;
