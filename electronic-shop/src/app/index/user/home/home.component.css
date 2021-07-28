@@ -380,7 +380,6 @@
 
 .home-content {
   position: relative;
-  padding-top: 20px;
 }
 
 .side-picture {
@@ -445,8 +444,4 @@ footer span {
   text-align: center;
   justify-content: center;
   justify-self: center;
-}
-
-.h6 {
-  
 }
