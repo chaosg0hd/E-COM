@@ -12,7 +12,7 @@
       <div class="card" (click)="viewProducts(prodInfoTable)">
         <div class="card-text">
           <!--Will Implement Image File Link-->
-          <img src="../assets/img/products/Breadboard.png" alt="image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+          <img src="{{prodInfoTable.prod_image}}" alt="image" style="display: block; margin-left: auto; margin-right: auto; width: 100px; height: 100px;">
           <h1 style="text-align: center;">{{prodInfoTable.prod_name}}</h1>
           <p id="price">₱{{prodInfoTable.prod_price}}</p>
           <p id="desc">{{prodInfoTable.prod_desc}}</p>

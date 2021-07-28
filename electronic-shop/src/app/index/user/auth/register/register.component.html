@@ -2,6 +2,7 @@
 
 <div class="container">
 
+  <img src="../assets/img/logoname2.png" alt="Electronic Shop Logo">
   <mat-form-field>
     <input matInput placeholder="Full Name" formControlName="name">
 
@@ -27,27 +28,11 @@
 
   </mat-form-field>
 
-  <button type="submit">Register</button>
-
-  <img src="../assets/img/logoname2.png" alt="Electronic Shop Logo">
-
-  <h3>Login</h3>
-
-  <mat-form-field>
-    <mat-icon matPrefix>person</mat-icon>
-    <input [(ngModel)]="user_name" type="text" matInput placeholder="User Name">
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-icon matPrefix>lock</mat-icon>
-    <input [(ngModel)]="user_password" type="password" matInput placeholder="Password">
-  </mat-form-field>
-
-  <button id="btn" mat-raised-button type="submit" (click)="loginUser()">Login</button><br />
-
   <button id="btn" mat-raised-button type="submit" routerLink="/register">Register</button>
 
-</div>
+  
+
+  
 
 
 <!--BACKGROUND SVG-->
