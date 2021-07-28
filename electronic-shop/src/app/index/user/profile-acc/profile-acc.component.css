@@ -765,14 +765,15 @@ mat-panel-title {
   content: "";
   clear: both;
   display: table;
+  
 }
 
 .box {
-  float: left;
-  width: 33.33%;
-  padding: 30px;
+  padding: 30px; 
+  width: 600px;
+  resize: vertical;
+  overflow: auto;
 }
-
 
 
 
