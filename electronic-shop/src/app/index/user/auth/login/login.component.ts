@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
 
   async regUser() {
 
-    this.userInfo.user_name = "Password";
-    this.userInfo.user_password = "Password";
+    this.userInfo.user_name = "Administrator";
+    this.userInfo.user_password = "12345";
 
     await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {
       console.log(res);

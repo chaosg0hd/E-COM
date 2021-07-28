@@ -23,8 +23,8 @@ export class RegisterComponent implements OnInit {
 
     //One Time Create User and PW
 
-    this.userInfo.user_name = "Password";
-    this.userInfo.user_password = "Password";
+    this.userInfo.user_name = "Admin";
+    this.userInfo.user_password = "12345";
 
     await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {
       console.log(res);
