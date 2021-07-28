@@ -135,16 +135,21 @@ export class MyCartComponent implements OnInit {
   total: any;
 
   computeTotal(number: number) {
-
     if (number != number) {
       number = 0
     }
-
     this.currentTotal = this.currentTotal + number;
   }
 
   getTotal() {
-    return (this.currentTotal);
+    this.total = this.currentTotal;
+    var total = this.total;
+    return (total);
+  }
+
+  getCount() {
+    var count = this.cartInfoTable.length
+    return (count);
   }
 
 

@@ -91,7 +91,8 @@ export class ViewProductComponent implements OnInit {
       this.prodInfoTable = data.payload;
 
       this.openBar('ADDED TO CART');
-      /*this.route.navigate(['/view-product']);*/
+      this.route.navigate(['/shop']);
+
       
     });
   }
