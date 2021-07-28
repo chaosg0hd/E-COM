@@ -16,10 +16,12 @@ import { ShopComponent } from './index/user/shop/shop.component';
 import { ViewProductComponent } from './index/user/shop/view-product/view-product.component';
 import { AboutUsComponent } from './index/user/about-us/about-us.component';
 
+import { MyCartComponent } from './index/user/my-cart/my-cart.component';
+
 //import { BuyNowComponent } from './shop/buy-now/buy-now.component';
 //import { AddToCartComponent } from './shop/add-to-cart/add-to-cart.component';
 
-//import { MyCartComponent } from './my-cart/my-cart.component';
+
 //import { OrderCheckoutComponent } from './my-cart/order-checkout/order-checkout.component';
 import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
 
@@ -65,6 +67,12 @@ const routes: Routes = [
     path: 'view-product', component: IndexComponent, children:
       [
         { path: '', component: ViewProductComponent },
+      ]
+  },
+  {
+    path: 'my-cart', component: IndexComponent, children:
+      [
+        { path: '', component: MyCartComponent },
       ]
   },
   {

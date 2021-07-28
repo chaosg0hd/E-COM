@@ -14,6 +14,17 @@ export interface prodTable {
   prod_image: string;
 }
 
+export interface prodTable {
+  prod_no: string;
+  prod_id: string;
+  prod_name: string;
+  prod_price: string;
+  prod_quantity: string;
+  prod_desc: string;
+}
+
+
+
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
@@ -27,11 +38,11 @@ export class ViewProductComponent implements OnInit {
     this._snackBar.open(message);
   }
 
-
   ngOnInit(): void {
     this.getData()
 
   }
+
 
   prodInfoTable: prodTable[] = [];
 
@@ -47,5 +58,17 @@ export class ViewProductComponent implements OnInit {
     this.prodInfoTable[0] = this.data.dataStore;
     console.log(this.prodInfoTable[0]);
   }
+
+  //USER NAME
+  user: any;
+
+  getUser() {
+    this.user = localStorage.getItem('Name');
+  }
+
+  addToCart() {
+
+  }
+
 
 }

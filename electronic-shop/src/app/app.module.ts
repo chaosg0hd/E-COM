@@ -12,6 +12,8 @@ import { HomeComponent } from './index/user/home/home.component';
 import { ShopComponent } from './index/user/shop/shop.component';
 import { ViewProductComponent } from './index/user/shop/view-product/view-product.component';
 
+import { MyCartComponent } from './index/user/my-cart/my-cart.component';
+
 import { AdminComponent } from './index/admin/admin.component';
 import { DashboardComponent } from './index/admin/dashboard/dashboard.component';
 
@@ -128,6 +130,8 @@ import { AboutUsComponent } from './index/user/about-us/about-us.component';
     ShopComponent,
     ViewProductComponent,
 
+    MyCartComponent,
+
     ProfileAccComponent,
 
     AdminComponent,
@@ -137,8 +141,7 @@ import { AboutUsComponent } from './index/user/about-us/about-us.component';
     //DeliveryComponent,   
     
     //BuyNowComponent,
-    //AddToCartComponent,,
-    //MyCartComponent,
+    //AddToCartComponent,
     //OrderCheckoutComponent,
     
     ///*PurchaseComponent,*/

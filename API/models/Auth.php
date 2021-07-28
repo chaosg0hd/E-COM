@@ -115,12 +115,12 @@
 					
 				
 					$user_name =$res['data'][0]['user_name'];
-					$user_id = $res['data'][0]['user_id'];		
+					//$user_id = $res['data'][0]['user_id'];		
 
 					$code = 200;
 					$remarks = "success";
 					$message = "Logged in successfully";
-					$payload = array("user_id"=>$user_id, "user_name"=>$user_name);
+					$payload = array( "user_name"=>$user_name);
 				} else {
 					$payload = null; 
 					$remarks = "failed"; 
