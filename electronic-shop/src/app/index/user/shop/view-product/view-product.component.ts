@@ -47,14 +47,7 @@ export class ViewProductComponent implements OnInit {
 
 
   prodInfoTable: prodTable[] = [];
-
-  prod_no: any = '';
-  prod_id: any = '';
-  prod_name: any = '';
-  prod_price: any = '';
-  prod_quantity: any = '';
-  prod_desc: any = '';
-  
+    
 
   getData() {
     this.prodInfoTable[0] = this.data.dataStore;
