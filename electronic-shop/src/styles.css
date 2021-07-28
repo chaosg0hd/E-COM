@@ -55,8 +55,8 @@ body { margin: 0; }
   flex: .7;
 }
 
-.shop-bag {
-    padding-right: 5%;
+mat-toolbar .shop-bag {
+    padding-right: 7%;
 }
 
 mat-toolbar mat-icon {
