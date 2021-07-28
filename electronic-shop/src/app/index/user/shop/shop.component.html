@@ -3,7 +3,7 @@
   <!-- Resources -->
   <div class="title-home">
     <h3>Shop</h3>
-    <p>Here are some links to help you get started:</p>
+    <p>Enjoy Shoping THANKYOU!</p>
   </div>
 
   <!--CARD-->
@@ -12,7 +12,7 @@
       <div class="card" (click)="viewProducts(prodInfoTable)">
         <div class="card-text">
           <!--Will Implement Image File Link-->
-          <img src="../assets/img/products/Breadboard.png" alt="image">
+          <img src="../assets/img/products/Breadboard.png" alt="image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
           <h6>{{prodInfoTable.prod_name}}</h6>
           <p id="price">₱{{prodInfoTable.prod_price}}</p>
           <p id="desc">{{prodInfoTable.prod_desc}}</p>
@@ -20,6 +20,7 @@
       </div>
     </ng-container>
   </div>
+  
 
   <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]">
   </mat-paginator>

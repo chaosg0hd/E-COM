@@ -63,15 +63,17 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
+    width: 100%;
+   
   }
 
   .card {
     border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    height: 290px;
-    width: 200px;
-    margin: 0 8px 16px;
+    height: 350px;
+    width: 250px;
+    margin: 0 20px 20px;
     padding: 16px;
     display: flex;
     /*flex-direction: row;*/
@@ -236,4 +238,11 @@ h1, h3, h6 {
 #price {
   color: #fd3a5c;
   font-size: 15px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
