@@ -56,7 +56,7 @@ body { margin: 0; }
 }
 
 mat-toolbar .shop-bag {
-    padding-right: 7%;
+    margin-right: 7%;
 }
 
 mat-toolbar mat-icon {
