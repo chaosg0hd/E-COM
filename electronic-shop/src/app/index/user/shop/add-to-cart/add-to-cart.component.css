@@ -494,3 +494,8 @@ input {
   position: absolute;
   margin-top: 40px;
 }
+
+.add-cart {
+  color: white;
+  font-family: Poppins;
+}

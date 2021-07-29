@@ -52,7 +52,7 @@ body { margin: 0; }
 }
 
 .spacer-left {
-  flex: .7;
+  flex: .9;
 }
 
 mat-toolbar .shop-bag {
@@ -123,5 +123,13 @@ footer span {
   text-align: center;
   justify-content: center;
   justify-self: center;
+}
+
+mat-toolbar {
+  padding: 8px; 
+  vertical-align: middle; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100
 }
 
