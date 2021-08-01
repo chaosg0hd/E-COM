@@ -6,6 +6,15 @@
         <p>Here are the available items at our shop. Enjoy your Shopping!</p>
     </div>
 
+    <!--SEARCH BAR-->
+    <div class="search-bar">
+        <mat-form-field appearance="outline">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Type to search">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>    
+    </div>
+
     <!--CARD-->
     <div class="card-container" >
         <ng-container *ngFor="let prodInfoTable of prodInfoTable">
@@ -35,7 +44,7 @@
     <div class="txt">
       <p>© Electronic Shop <span>·</span> 2021</p>
     </div>
-  </footer>
+</footer>
 
    
 

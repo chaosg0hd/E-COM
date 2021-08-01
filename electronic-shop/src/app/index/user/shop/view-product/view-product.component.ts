@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
+import { AddToCartComponent } from '../add-to-cart/add-to-cart.component';
 
 export interface prodTable {
   prod_no: string;
@@ -32,6 +33,7 @@ export interface cartTable {
   styleUrls: ['./view-product.component.css']
 })
 export class ViewProductComponent implements OnInit {
+  durationInSeconds = 5;
 
   constructor(private data: DataService, private _snackBar: MatSnackBar, public route: Router) {}
 
@@ -94,6 +96,10 @@ export class ViewProductComponent implements OnInit {
       this.route.navigate(['/shop']);
 
       
+    });
+
+    this._snackBar.openFromComponent(AddToCartComponent, {
+      duration: this.durationInSeconds * 1000,
     });
   }
 
