@@ -77,10 +77,10 @@
             $payload = array(
 				'full_name'=>$dt->full_name,
                 'user_name'=>$dt->user_name,
+				'user_password'=>$this->encrypt_password($dt->user_password),
 				'user_email'=>$dt->user_email,
 				'user_contact'=>$dt->user_contact,
-				'user_address'=>$dt->user_email,
-                'user_password'=>$this->encrypt_password($dt->user_password)
+				'user_address'=>$dt->user_email
             );
 
             $sql = "INSERT INTO user_tb( full_name, user_name, user_password, user_email, user_contact, user_address) 
@@ -119,7 +119,7 @@
 					
 				
 					$user_name =$res['data'][0]['user_name'];
-					//$user_id = $res['data'][0]['user_id'];		
+					$user_id = $res['data'][0]['user_no'];		
 
 					$code = 200;
 					$remarks = "success";

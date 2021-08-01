@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
     this.userInfo.user_name = "ADMIN";
     this.userInfo.user_address = "ADMIN BUILDING";
     this.userInfo.user_email = "ADMIN@ADMIN";
-    this.userInfo.user_tel = "ADMIN"
+    this.userInfo.user_contact = "ADMIN"
     this.userInfo.user_password = "ADMIN"
 
     await this.ds.sendApiRequest("regUser", this.userInfo).subscribe((res: any) => {

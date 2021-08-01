@@ -3,6 +3,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 
+import { MatDialog } from '@angular/material/dialog';
+
+
 
 export interface prodTable {
   prod_no: string;
@@ -113,11 +116,19 @@ export class MyCartComponent implements OnInit {
   badgeNoti: any;
   filteredCartTableInfo: cartTable[] = []
 
+
+  currentTotal: number = 0;
+  total: any;
+
   filterCart() {
+
+    this.currentTotal = 0;
+
     for (let cartInfoTable of this.cartInfoTable) {
       if (cartInfoTable.cart_id === this.user) {
         if (cartInfoTable.cart_status === 'true') {
-          console.log('matched')
+          console.log('matched');
+          this.currentTotal = this.currentTotal + cartInfoTable.cart_total;
           this.filteredCartTableInfo.push(cartInfoTable)
           console.log(this.filteredCartTableInfo)
         }
@@ -131,20 +142,16 @@ export class MyCartComponent implements OnInit {
 
   //Total Price
 
-  currentTotal: number = 0;
-  total: any;
-
-  computeTotal(number: number) {
-    if (number != number) {
-      number = 0
-    }
-    this.currentTotal = this.currentTotal + number;
-  }
+  //computeTotal(number: number) {
+  //  if (number != number) {
+  //    number = 0
+  //  }
+  //  this.currentTotal = this.currentTotal + number;
+  //}
 
   getTotal() {
     this.total = this.currentTotal;
-    var total = this.total;
-    return (total);
+    return (this.total);
   }
 
   getCount() {
@@ -155,3 +162,9 @@ export class MyCartComponent implements OnInit {
 
 
 }
+
+@Component({
+  selector: 'dialog-content-example-dialog',
+  templateUrl: 'dialog-content-example-dialog.html',
+})
+export class DialogContentExampleDialog { }
