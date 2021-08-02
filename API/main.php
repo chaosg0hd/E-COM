@@ -76,6 +76,11 @@
 					}
 				break;
 
+		case 'delCart':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo json_encode($post->delCart($d), JSON_PRETTY_PRINT);
+				break;
+
 		// Cart Operations
 
         case 'addCart':
@@ -90,6 +95,26 @@
 						echo json_encode($get->pullAllCart($d), JSON_PRETTY_PRINT);
 					} else {
 						echo json_encode($get->pullAllCart($d), JSON_PRETTY_PRINT);
+					}
+				break;
+
+		case 'addOrder':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo json_encode($post->addOrder($d), JSON_PRETTY_PRINT);
+				break;
+
+		case 'editOrder':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo json_encode($post->editOrder($d), JSON_PRETTY_PRINT);
+				break;
+
+		case 'pullAllOrders':
+					$d = json_decode(base64_decode(file_get_contents("php://input")));
+					echo $d;
+            if(count($req)>1) {                       
+						echo json_encode($get->pullAllOrders($d), JSON_PRETTY_PRINT);
+					} else {
+						echo json_encode($get->pullAllOrders($d), JSON_PRETTY_PRINT);
 					}
 				break;
 

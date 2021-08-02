@@ -31,7 +31,7 @@ import { OrderCheckoutComponent } from './index/user/my-cart/order-checkout/orde
 import { ProfileAccComponent } from './index/user/profile-acc/profile-acc.component';
 
 //import { PurchaseHistoryComponent } from './profile-acc/purchase-history/purchase-history.component';
-//import { EditProfileComponent } from './profile-acc/edit-profile/edit-profile.component';
+/*import { EditProfileComponent } from './index/user/profile-acc/edit-profile/edit-profile.component';*/
 //import { MyAddressComponent } from './profile-acc/my-address/my-address.component';
 //import { AddAddressComponent } from './profile-acc/my-address/add-address/add-address.component';
 //import { EditAddressComponent } from './profile-acc/my-address/edit-address/edit-address.component';
@@ -125,6 +125,8 @@ import { ProductsComponent } from './index/admin/products/products.component';
     OrdersComponent,
     LoginComponent,
     RegisterComponent,
+
+    /*EditProfileComponent,*/
     
 
     HomeComponent,

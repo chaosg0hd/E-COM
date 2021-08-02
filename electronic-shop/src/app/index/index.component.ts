@@ -20,7 +20,7 @@ export interface cartTable {
 })
 export class IndexComponent implements OnInit {
 
-  constructor(public data : DataService,) { }
+  constructor(public data : DataService, public router : Router) { }
 
   ngOnInit(): void {
 
@@ -64,6 +64,10 @@ export class IndexComponent implements OnInit {
     this.cartInfoTable = this.filteredCartTableInfo;
     this.badgeNoti = this.cartInfoTable.length
     console.log(this.badgeNoti);
+  }
+
+  logout() {
+    this.router.navigate(['/login'])
   }
 
 

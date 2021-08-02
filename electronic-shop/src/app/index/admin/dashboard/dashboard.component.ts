@@ -10,6 +10,13 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    this.pullAllOrders()
   }
+
+  pullAllOrders() {
+
+  }
+
 
 }

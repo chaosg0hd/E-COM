@@ -14,12 +14,12 @@
 
   <!--CART BUTTON-->
   <button mat-icon-button aria-label="Shopping Bag" routerLink="/my-cart" matTooltip="Shopping Bag">
-    <mat-icon matBadge="{{badgeNoti}}" matBadgeColor="warn">shopping_basket</mat-icon>  
+    <mat-icon matBadge="{{badgeNoti}}" matBadgeColor="warn">shopping_basket</mat-icon>
   </button>
 
   <!--LOGOUT BUTTON-->
-  <button class="shop-bag" mat-icon-button aria-label="Exit App" matTooltip="Logout">
-    <mat-icon>exit_to_app</mat-icon> 
+  <button class="shop-bag" mat-icon-button aria-label="Exit App" matTooltip="Logout" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
   </button>
 
 </mat-toolbar>

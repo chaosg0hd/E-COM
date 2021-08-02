@@ -37,6 +37,16 @@ export class MyCartComponent implements OnInit {
 
   constructor(private data: DataService, private _snackBar: MatSnackBar, public route: Router) { }
 
+  //Too lazy to palce to database so eto n lang haha
+
+  name = "Via Grazielle Torres";
+
+  contact = "(+63) 951 127 9228";
+
+  address = "32 Caron St.West Bajac-Bajac, Olongapo City, North Luzon, Zambales 2200";
+
+
+
   ngOnInit(): void {
     this.getUser();
     this.pullAllProd();
@@ -159,12 +169,79 @@ export class MyCartComponent implements OnInit {
     return (count);
   }
 
+  addOrderInfo: any = {};
 
+  generateOrder() {
+
+    console.log(this.cartInfoTable);
+    var orderstring: string;
+
+    console.log(this.name);
+    console.log(this.address);
+    console.log(this.contact);
+
+    orderstring = ' USER ' + ':' + this.name + '; ADDRESS :' + this.address + '; CONTACT INFO: ' + this.contact + '; WITH ORDER :';
+
+    var cartInfostring: string = '';
+
+    console.log(orderstring);      
+
+    for (let cartInfoTable of this.cartInfoTable) {
+
+      cartInfostring = cartInfoTable.prod_quantity + ' UNITS OF:' + this.getProdName(cartInfoTable.prod_id) + ' @ TOTAL OF : ' + cartInfoTable.cart_total + 'php ; ';
+      console.log(cartInfoTable);
+      console.log(cartInfoTable.prod_quantity);
+      console.log(this.getProdName(cartInfoTable.prod_id));
+      orderstring = orderstring + cartInfostring      
+    }
+
+    orderstring = orderstring + 'TOTALLING TO:' + this.total;
+
+    console.log(orderstring);
+    this.addOrder(orderstring);
+
+    this.route.navigate(['/profile'])
+
+
+  }
+
+  addOrder(orderstring: any) {
+
+
+    this.addOrderInfo = {};
+    this.addOrderInfo.user_id = this.user;
+    this.addOrderInfo.order_content = orderstring;
+    this.addOrderInfo.order_total = this.total;
+
+    console.log(this.addOrderInfo);
+
+
+    this.data.sendApiRequest("addOrder", this.addOrderInfo).subscribe((data: any) => {
+      console.log(this.addOrderInfo + ' From Shop Page: Method pullAllProd');
+    });
+
+    for (let cartInfoTable of this.cartInfoTable) {
+      this.delCart(cartInfoTable);
+    }
+  }
+
+  delCart(cartInfo: any) {
+    console.log(cartInfo)
+    this.data.sendApiRequest("delCart", cartInfo).subscribe((data: any) => {
+    });
+  }
+
+  //editCartInfo(cartInfoTable: any) {
+  //  this.data.sendApiRequest("editCart", cartInfoTable).subscribe((data: any) => {
+  //    console.log(this.addOrderInfo + ' From Shop Page: Method pullAllProd');
+  //  });
+
+  //}
 
 }
 
-@Component({
-  selector: 'dialog-content-example-dialog',
-  templateUrl: 'dialog-content-example-dialog.html',
-})
-export class DialogContentExampleDialog { }
+//@Component({
+//  selector: 'dialog-content-example-dialog',
+//  templateUrl: 'dialog-content-example-dialog.html',
+//})
+//export class DialogContentExampleDialog { }

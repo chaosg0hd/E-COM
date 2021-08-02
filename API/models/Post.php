@@ -79,6 +79,43 @@ class Post{
         return $this->gm->sendPayload($payload, $remarks, $message, $code);
     }
 
+    public function delCart($d) {
+      $code = 0;
+      $data = $d;
+      $cart_no = $data->cart_no;
+      $res = $this->gm->delete('cart_tb', $data, "cart_no = '$cart_no'");
+      if ($res['code'] == 200) {
+			  $payload = $res['data'];
+			  $remarks = "success";
+			  $message = "Successfully retrieved requested data";
+		  } else {
+			  $payload = null;
+			  $remarks = "failed";
+			  $message = $res['errmsg'];
+		  }
+      return $this->gm->sendPayload($payload, $remarks, $message, $code);
+    }
+
+
+    //Cart Operations
+
+    public function addOrder($data) {
+        $code = 401;
+        $payload = null;
+        $remarks = "failed";
+        $message = "Unable to retrieve data";
+        $reqInfo = $data;
+        $res = $this->gm->insert('orders_tb', $reqInfo);
+        if($res['code']==200) {
+            $code = 200;
+            $payload = $res;
+            $remarks = "success";
+            $message = "Successfully retrieved data";
+        }
+        return $this->gm->sendPayload($payload, $remarks, $message, $code);
+    }
+
+
 
     //CHEATSHEETS
 
